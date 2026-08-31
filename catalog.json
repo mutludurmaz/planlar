@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T18:46:37Z",
+  "generatedAt": "2026-08-31T18:55:50Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
     {
@@ -229,38 +229,6 @@
           "fileName": "Fen Liseleri Matematik Dersi.xlsx",
           "path": "Matematik/Fen Liseleri Matematik Dersi.xlsx",
           "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Matematik/Fen%20Liseleri%20Matematik%20Dersi.xlsx",
-          "grades": [
-            9,
-            10,
-            11,
-            12
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Türk Dili ve Edebiyatı",
-      "path": "Türk Dili ve Edebiyatı",
-      "schools": [
-        {
-          "id": "anadolu",
-          "title": "Anadolu Lisesi",
-          "fileName": "Anadolu Liseleri Türk Dili ve Edebiyatı.xlsx",
-          "path": "Türk Dili ve Edebiyatı/Anadolu Liseleri Türk Dili ve Edebiyatı.xlsx",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1/Anadolu%20Liseleri%20T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1.xlsx",
-          "grades": [
-            9,
-            10,
-            11,
-            12
-          ]
-        },
-        {
-          "id": "fen",
-          "title": "Fen Lisesi",
-          "fileName": "Anadolu Liseleri Türk Dili ve Edebiyatı.xlsx",
-          "path": "Türk Dili ve Edebiyatı/Anadolu Liseleri Türk Dili ve Edebiyatı.xlsx",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1/Anadolu%20Liseleri%20T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1.xlsx",
           "grades": [
             9,
             10,
