@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T19:57:05Z",
+  "generatedAt": "2026-08-31T19:58:08Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
     {
@@ -758,6 +758,51 @@
           "fileName": "Tarih SOSYAL BİLİMLER LİSESİ.xlsx",
           "path": "Tarih/Tarih SOSYAL BİLİMLER LİSESİ.xlsx",
           "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Tarih/Tarih%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Türk Dili ve Edebiyatı",
+      "path": "Türk Dili ve Edebiyatı",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Türk Dili ve Edebiyatı ANADOLU LİSESİ.xlsx",
+          "path": "Türk Dili ve Edebiyatı/Türk Dili ve Edebiyatı ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Türk Dili ve Edebiyatı FEN LİSESİ.xlsx",
+          "path": "Türk Dili ve Edebiyatı/Türk Dili ve Edebiyatı FEN LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1%20FEN%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Türk Dili ve Edebiyatı SOSYAL BİLİMLER LİSESİ",
+          "fileName": "Türk Dili ve Edebiyatı SOSYAL BİLİMLER LİSESİ.xlsx",
+          "path": "Türk Dili ve Edebiyatı/Türk Dili ve Edebiyatı SOSYAL BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
           "grades": [
             9,
             10,
