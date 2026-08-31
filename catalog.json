@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T19:34:27Z",
+  "generatedAt": "2026-08-31T19:34:45Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
     {
@@ -195,6 +195,56 @@
               "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 12 anadolu lisesi.xlsx",
               "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%2012%20anadolu%20lisesi.xlsx"
             }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Felsefe",
+      "path": "Felsefe",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Felsefe ANADOLU LİSESİ.xlsx",
+          "path": "Felsefe/Felsefe ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Felsefe/Felsefe%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            10,
+            11
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Felsefe ANADOLU LİSESİ.xlsx",
+          "path": "Felsefe/Felsefe ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Felsefe/Felsefe%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            10,
+            11
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Felsefe FEN BİLİMLER LİSESİ",
+          "fileName": "Felsefe FEN BİLİMLER LİSESİ.xlsx",
+          "path": "Felsefe/Felsefe FEN BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Felsefe/Felsefe%20FEN%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            10,
+            11
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Felsefe SOSYAL BİLİMLER LİSESİ",
+          "fileName": "Felsefe SOSYAL BİLİMLER LİSESİ.xlsx",
+          "path": "Felsefe/Felsefe SOSYAL BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Felsefe/Felsefe%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            10,
+            11
           ]
         }
       ]
