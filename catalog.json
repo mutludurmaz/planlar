@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T19:45:03Z",
+  "generatedAt": "2026-08-31T19:47:01Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
     {
@@ -288,6 +288,38 @@
           "grades": [
             9,
             10
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Görsel Sanatlar",
+      "path": "Görsel Sanatlar",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "GÖRSEL SANATLAR Anadolu Lisesi.xlsx",
+          "path": "Görsel Sanatlar/GÖRSEL SANATLAR Anadolu Lisesi.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/G%C3%B6rsel%20Sanatlar/G%C3%96RSEL%20SANATLAR%20Anadolu%20Lisesi.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "GÖRSEL SANATLAR Anadolu Lisesi.xlsx",
+          "path": "Görsel Sanatlar/GÖRSEL SANATLAR Anadolu Lisesi.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/G%C3%B6rsel%20Sanatlar/G%C3%96RSEL%20SANATLAR%20Anadolu%20Lisesi.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
           ]
         }
       ]
