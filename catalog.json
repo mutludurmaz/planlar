@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T19:34:45Z",
+  "generatedAt": "2026-08-31T19:36:58Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
     {
@@ -358,6 +358,51 @@
           "fileName": "Matematik FEN LİSESİ.xlsx",
           "path": "Matematik/Matematik FEN LİSESİ.xlsx",
           "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Matematik/Matematik%20FEN%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Psikoloji",
+      "path": "Psikoloji",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Psikoloji ANADOLU LİSESİ.xlsx",
+          "path": "Psikoloji/Psikoloji ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Psikoloji/Psikoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Psikoloji ANADOLU LİSESİ.xlsx",
+          "path": "Psikoloji/Psikoloji ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Psikoloji/Psikoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Psikoloji SOSYAL BİLİMLER LİSESİ",
+          "fileName": "Psikoloji SOSYAL BİLİMLER LİSESİ.xlsx",
+          "path": "Psikoloji/Psikoloji SOSYAL BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Psikoloji/Psikoloji%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
           "grades": [
             9,
             10,
