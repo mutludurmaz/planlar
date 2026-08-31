@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T19:51:44Z",
+  "generatedAt": "2026-08-31T19:54:15Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
     {
@@ -520,6 +520,78 @@
             10,
             11,
             12
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Müzik",
+      "path": "Müzik",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Müzik 9 ve 10 Anadolu Lisesi.xlsx",
+          "path": "Müzik/Müzik 9 ve 10 Anadolu Lisesi.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/M%C3%BCzik/M%C3%BCzik%209%20ve%2010%20Anadolu%20Lisesi.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10
+              ],
+              "fileName": "Müzik 9 ve 10 Anadolu Lisesi.xlsx",
+              "path": "Müzik/Müzik 9 ve 10 Anadolu Lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/M%C3%BCzik/M%C3%BCzik%209%20ve%2010%20Anadolu%20Lisesi.xlsx"
+            },
+            {
+              "grades": [
+                11,
+                12
+              ],
+              "fileName": "Müzik 11 ve 12 Anadolu Lisesi.xlsx",
+              "path": "Müzik/Müzik 11 ve 12 Anadolu Lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/M%C3%BCzik/M%C3%BCzik%2011%20ve%2012%20Anadolu%20Lisesi.xlsx"
+            }
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Müzik 9 ve 10 Anadolu Lisesi.xlsx",
+          "path": "Müzik/Müzik 9 ve 10 Anadolu Lisesi.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/M%C3%BCzik/M%C3%BCzik%209%20ve%2010%20Anadolu%20Lisesi.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10
+              ],
+              "fileName": "Müzik 9 ve 10 Anadolu Lisesi.xlsx",
+              "path": "Müzik/Müzik 9 ve 10 Anadolu Lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/M%C3%BCzik/M%C3%BCzik%209%20ve%2010%20Anadolu%20Lisesi.xlsx"
+            },
+            {
+              "grades": [
+                11,
+                12
+              ],
+              "fileName": "Müzik 11 ve 12 Anadolu Lisesi.xlsx",
+              "path": "Müzik/Müzik 11 ve 12 Anadolu Lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/M%C3%BCzik/M%C3%BCzik%2011%20ve%2012%20Anadolu%20Lisesi.xlsx"
+            }
           ]
         }
       ]
