@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T19:21:44Z",
+  "generatedAt": "2026-08-31T19:22:47Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
     {
@@ -26,38 +26,6 @@
           "fileName": "BİYOLOJİ FEN LİSESI.xlsx",
           "path": "Biyoloji/BİYOLOJİ FEN LİSESI.xlsx",
           "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Biyoloji/BI%CC%87YOLOJI%CC%87%20FEN%20LI%CC%87SESI.xlsx",
-          "grades": [
-            9,
-            10,
-            11,
-            12
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Coğrafya",
-      "path": "Coğrafya",
-      "schools": [
-        {
-          "id": "anadolu",
-          "title": "Anadolu Lisesi",
-          "fileName": "ANADOLU LİSESİ COĞRAFYa.xlsx",
-          "path": "Coğrafya/ANADOLU LİSESİ COĞRAFYa.xlsx",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Co%C4%9Frafya/ANADOLU%20L%C4%B0SES%C4%B0%20CO%C4%9ERAFYa.xlsx",
-          "grades": [
-            9,
-            10,
-            11,
-            12
-          ]
-        },
-        {
-          "id": "fen",
-          "title": "Fen Lisesi",
-          "fileName": "ANADOLU LİSESİ COĞRAFYa.xlsx",
-          "path": "Coğrafya/ANADOLU LİSESİ COĞRAFYa.xlsx",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Co%C4%9Frafya/ANADOLU%20L%C4%B0SES%C4%B0%20CO%C4%9ERAFYa.xlsx",
           "grades": [
             9,
             10,
