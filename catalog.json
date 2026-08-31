@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T18:45:46Z",
+  "generatedAt": "2026-08-31T18:46:37Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
     {
@@ -159,6 +159,49 @@
           "grades": [
             10,
             11
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Fizik",
+      "path": "Fizik",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Fizik ANADOLU LİSESİ.xlsx",
+          "path": "Fizik/Fizik ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Fizik/Fizik%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Fizik FEN LİSESİ.xlsx",
+          "path": "Fizik/Fizik FEN LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Fizik/Fizik%20FEN%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Fizik SOSYAL BİLİMLER LİSESİ",
+          "fileName": "Fizik SOSYAL BİLİMLER LİSESİ.xlsx",
+          "path": "Fizik/Fizik SOSYAL BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Fizik/Fizik%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10
           ]
         }
       ]
