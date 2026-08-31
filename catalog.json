@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T18:45:32Z",
+  "generatedAt": "2026-08-31T18:45:46Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
     {
@@ -159,25 +159,6 @@
           "grades": [
             10,
             11
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Fizik",
-      "path": "Fizik",
-      "schools": [
-        {
-          "id": "fen",
-          "title": "Fen Lisesi",
-          "fileName": "FEN LİSESİ FİZİK DERSİ TASLAK YILLIK PLANI.xlsx",
-          "path": "Fizik/FEN LİSESİ FİZİK DERSİ TASLAK YILLIK PLANI.xlsx",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Fizik/FEN%20L%C4%B0SES%C4%B0%20F%C4%B0Z%C4%B0K%20DERS%C4%B0%20TASLAK%20YILLIK%20PLANI.xlsx",
-          "grades": [
-            9,
-            10,
-            11,
-            12
           ]
         }
       ]
