@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T19:36:58Z",
+  "generatedAt": "2026-08-31T19:39:14Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
     {
@@ -408,6 +408,42 @@
             10,
             11,
             12
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Sosyoloji",
+      "path": "Sosyoloji",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Sosyoloji ANADOLU LİSESİ.xlsx",
+          "path": "Sosyoloji/Sosyoloji ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyoloji/Sosyoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            11
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Sosyoloji ANADOLU LİSESİ.xlsx",
+          "path": "Sosyoloji/Sosyoloji ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyoloji/Sosyoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            11
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Sosyoloji SOSYAL BİLİMLER LİSESİ",
+          "fileName": "Sosyoloji SOSYAL BİLİMLER LİSESİ.xlsx",
+          "path": "Sosyoloji/Sosyoloji SOSYAL BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyoloji/Sosyoloji%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            11
           ]
         }
       ]
