@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T19:42:34Z",
+  "generatedAt": "2026-08-31T19:45:03Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
     {
@@ -331,6 +331,51 @@
           "grades": [
             9,
             10
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Mantık",
+      "path": "Mantık",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Mantık ANADOLU LİSESi.xlsx",
+          "path": "Mantık/Mantık ANADOLU LİSESi.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Mant%C4%B1k/Mant%C4%B1k%20ANADOLU%20L%C4%B0SESi.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Mantık ANADOLU LİSESi.xlsx",
+          "path": "Mantık/Mantık ANADOLU LİSESi.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Mant%C4%B1k/Mant%C4%B1k%20ANADOLU%20L%C4%B0SESi.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Mantık SOSYAL BİLİMLER LİSESİ",
+          "fileName": "Mantık SOSYAL BİLİMLER LİSESİ.xlsx",
+          "path": "Mantık/Mantık SOSYAL BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Mant%C4%B1k/Mant%C4%B1k%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
           ]
         }
       ]
