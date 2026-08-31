@@ -1,8 +1,27 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T19:25:19Z",
+  "generatedAt": "2026-08-31T19:30:32Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
+    {
+      "title": "Beden Eğitimi ve Spor",
+      "path": "Beden Eğitimi ve Spor",
+      "schools": [
+        {
+          "id": "diger",
+          "title": "Beden Eğitimi ve Spor Dersi",
+          "fileName": "Beden Eğitimi ve Spor Dersi.xlsx",
+          "path": "Beden Eğitimi ve Spor/Beden Eğitimi ve Spor Dersi.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Beden%20E%C4%9Fitimi%20ve%20Spor/Beden%20E%C4%9Fitimi%20ve%20Spor%20Dersi.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ]
+    },
     {
       "title": "Biyoloji",
       "path": "Biyoloji",
