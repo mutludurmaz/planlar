@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T19:34:08Z",
+  "generatedAt": "2026-08-31T19:34:27Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
     {
@@ -195,23 +195,6 @@
               "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 12 anadolu lisesi.xlsx",
               "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%2012%20anadolu%20lisesi.xlsx"
             }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Felsefe",
-      "path": "Felsefe",
-      "schools": [
-        {
-          "id": "fen",
-          "title": "Fen Lisesi",
-          "fileName": "Fen Liseleri Felsefe.xlsx",
-          "path": "Felsefe/Fen Liseleri Felsefe.xlsx",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Felsefe/Fen%20Liseleri%20Felsefe.xlsx",
-          "grades": [
-            10,
-            11
           ]
         }
       ]
