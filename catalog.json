@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T19:22:47Z",
+  "generatedAt": "2026-08-31T19:25:19Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
     {
@@ -26,6 +26,51 @@
           "fileName": "BİYOLOJİ FEN LİSESI.xlsx",
           "path": "Biyoloji/BİYOLOJİ FEN LİSESI.xlsx",
           "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Biyoloji/BI%CC%87YOLOJI%CC%87%20FEN%20LI%CC%87SESI.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Coğrafya",
+      "path": "Coğrafya",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Coğrafya ANADOLU LİSESİ.xlsx",
+          "path": "Coğrafya/Coğrafya ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Co%C4%9Frafya/Co%C4%9Frafya%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Coğrafya FEN LİSESİ.xlsx",
+          "path": "Coğrafya/Coğrafya FEN LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Co%C4%9Frafya/Co%C4%9Frafya%20FEN%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Coğrafya SOSYAL BİLİMLER LİSESİ",
+          "fileName": "Coğrafya SOSYAL BİLİMLER LİSESİ.xlsx",
+          "path": "Coğrafya/Coğrafya SOSYAL BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Co%C4%9Frafya/Co%C4%9Frafya%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
           "grades": [
             9,
             10,
