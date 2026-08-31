@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T19:39:14Z",
+  "generatedAt": "2026-08-31T19:42:34Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
     {
@@ -403,6 +403,51 @@
           "fileName": "Psikoloji SOSYAL BİLİMLER LİSESİ.xlsx",
           "path": "Psikoloji/Psikoloji SOSYAL BİLİMLER LİSESİ.xlsx",
           "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Psikoloji/Psikoloji%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Sosyal Bilim Çalışmaları",
+      "path": "Sosyal Bilim Çalışmaları",
+      "schools": [
+        {
+          "id": "diger",
+          "title": "Sosyal Bilim Çalışmaları 1 SOSYAL BİLİMLER LİSESİ",
+          "fileName": "Sosyal Bilim Çalışmaları 1 SOSYAL BİLİMLER LİSESİ.xlsx",
+          "path": "Sosyal Bilim Çalışmaları/Sosyal Bilim Çalışmaları 1 SOSYAL BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyal%20Bilim%20%C3%87al%C4%B1%C5%9Fmalar%C4%B1/Sosyal%20Bilim%20%C3%87al%C4%B1%C5%9Fmalar%C4%B1%201%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Sosyal Bilim Çalışmaları 2 SOSYAL BİLİMLER LİSESi",
+          "fileName": "Sosyal Bilim Çalışmaları 2 SOSYAL BİLİMLER LİSESi.xlsx",
+          "path": "Sosyal Bilim Çalışmaları/Sosyal Bilim Çalışmaları 2 SOSYAL BİLİMLER LİSESi.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyal%20Bilim%20%C3%87al%C4%B1%C5%9Fmalar%C4%B1/Sosyal%20Bilim%20%C3%87al%C4%B1%C5%9Fmalar%C4%B1%202%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SESi.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Sosyal Bilim Çalışmaları 3 SOSYAL BİLİMLER LİSESİ",
+          "fileName": "Sosyal Bilim Çalışmaları 3 SOSYAL BİLİMLER LİSESİ.xlsx",
+          "path": "Sosyal Bilim Çalışmaları/Sosyal Bilim Çalışmaları 3 SOSYAL BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyal%20Bilim%20%C3%87al%C4%B1%C5%9Fmalar%C4%B1/Sosyal%20Bilim%20%C3%87al%C4%B1%C5%9Fmalar%C4%B1%203%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
           "grades": [
             9,
             10,
