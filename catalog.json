@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T18:59:09Z",
+  "generatedAt": "2026-08-31T19:05:01Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
     {
@@ -199,6 +199,49 @@
           "fileName": "Fizik SOSYAL BİLİMLER LİSESİ.xlsx",
           "path": "Fizik/Fizik SOSYAL BİLİMLER LİSESİ.xlsx",
           "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Fizik/Fizik%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Kimya",
+      "path": "Kimya",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Kimya ANADOLU LİSESİ.xlsx",
+          "path": "Kimya/Kimya ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Kimya/Kimya%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Kimya FEN LİSESİ.xlsx",
+          "path": "Kimya/Kimya FEN LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Kimya/Kimya%20FEN%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Kimya SOSYAL BİLİMLER LİSESİ",
+          "fileName": "Kimya SOSYAL BİLİMLER LİSESİ.xlsx",
+          "path": "Kimya/Kimya SOSYAL BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Kimya/Kimya%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
           "grades": [
             9,
             10
