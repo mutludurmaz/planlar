@@ -1,8 +1,40 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T19:05:01Z",
+  "generatedAt": "2026-08-31T19:21:44Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
+    {
+      "title": "Biyoloji",
+      "path": "Biyoloji",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "BİYOLOJİ ANADOLU LİSESİ.xlsx",
+          "path": "Biyoloji/BİYOLOJİ ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Biyoloji/B%C4%B0YOLOJ%C4%B0%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "BİYOLOJİ FEN LİSESI.xlsx",
+          "path": "Biyoloji/BİYOLOJİ FEN LİSESI.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Biyoloji/BI%CC%87YOLOJI%CC%87%20FEN%20LI%CC%87SESI.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ]
+    },
     {
       "title": "Coğrafya",
       "path": "Coğrafya",
