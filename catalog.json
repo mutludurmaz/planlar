@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "generatedAt": "2026-08-31T13:55:27Z",
+  "source": "https://github.com/mutludurmaz/planlar",
+  "subjects": [
+    {
+      "title": "Coğrafya",
+      "path": "Coğrafya",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "ANADOLU LİSESİ COĞRAFYa.xlsx",
+          "path": "Coğrafya/ANADOLU LİSESİ COĞRAFYa.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Co%C4%9Frafya/ANADOLU%20L%C4%B0SES%C4%B0%20CO%C4%9ERAFYa.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Felsefe",
+      "path": "Felsefe",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Anadolu Liseleri Felsefe.xlsx",
+          "path": "Felsefe/Anadolu Liseleri Felsefe.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Felsefe/Anadolu%20Liseleri%20Felsefe.xlsx",
+          "grades": [
+            10,
+            11
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Fen Liseleri Felsefe.xlsx",
+          "path": "Felsefe/Fen Liseleri Felsefe.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Felsefe/Fen%20Liseleri%20Felsefe.xlsx",
+          "grades": [
+            10,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Fizik",
+      "path": "Fizik",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Fizik Anadolu Liseleri.xlsx",
+          "path": "Fizik/Fizik Anadolu Liseleri.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Fizik/Fizik%20Anadolu%20Liseleri.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "FEN LİSESİ FİZİK DERSİ TASLAK YILLIK PLANI.xlsx",
+          "path": "Fizik/FEN LİSESİ FİZİK DERSİ TASLAK YILLIK PLANI.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Fizik/FEN%20L%C4%B0SES%C4%B0%20F%C4%B0Z%C4%B0K%20DERS%C4%B0%20TASLAK%20YILLIK%20PLANI.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Matematik",
+      "path": "Matematik",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Anadolu Liseleri Matematik.xlsx",
+          "path": "Matematik/Anadolu Liseleri Matematik.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Matematik/Anadolu%20Liseleri%20Matematik.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Fen Liseleri Matematik Dersi.xlsx",
+          "path": "Matematik/Fen Liseleri Matematik Dersi.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Matematik/Fen%20Liseleri%20Matematik%20Dersi.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Türk Dili ve Edebiyatı",
+      "path": "Türk Dili ve Edebiyatı",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Anadolu Liseleri Türk Dili ve Edebiyatı.xlsx",
+          "path": "Türk Dili ve Edebiyatı/Anadolu Liseleri Türk Dili ve Edebiyatı.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1/Anadolu%20Liseleri%20T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ]
+    }
+  ]
+}
