@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T18:58:35Z",
+  "generatedAt": "2026-08-31T18:59:09Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
     {
@@ -202,6 +202,38 @@
           "grades": [
             9,
             10
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Matematik",
+      "path": "Matematik",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Matematik ANADOLU LİSESİ.xlsx",
+          "path": "Matematik/Matematik ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Matematik/Matematik%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Matematik FEN LİSESİ.xlsx",
+          "path": "Matematik/Matematik FEN LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Matematik/Matematik%20FEN%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
           ]
         }
       ]
