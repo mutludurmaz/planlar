@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T14:19:40Z",
+  "generatedAt": "2026-08-31T14:30:58Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
     {
@@ -10,6 +10,19 @@
         {
           "id": "anadolu",
           "title": "Anadolu Lisesi",
+          "fileName": "ANADOLU LİSESİ COĞRAFYa.xlsx",
+          "path": "Coğrafya/ANADOLU LİSESİ COĞRAFYa.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Co%C4%9Frafya/ANADOLU%20L%C4%B0SES%C4%B0%20CO%C4%9ERAFYa.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
           "fileName": "ANADOLU LİSESİ COĞRAFYa.xlsx",
           "path": "Coğrafya/ANADOLU LİSESİ COĞRAFYa.xlsx",
           "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Co%C4%9Frafya/ANADOLU%20L%C4%B0SES%C4%B0%20CO%C4%9ERAFYa.xlsx",
@@ -29,42 +42,6 @@
         {
           "id": "anadolu",
           "title": "Anadolu Lisesi",
-          "fileName": "Din Kültürü ve Ahlak Bilgisi 10 anadolu lisesi.xlsx",
-          "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 10 anadolu lisesi.xlsx",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%2010%20anadolu%20lisesi.xlsx",
-          "grades": [
-            9,
-            10,
-            11,
-            12
-          ]
-        },
-        {
-          "id": "anadolu",
-          "title": "Anadolu Lisesi",
-          "fileName": "Din Kültürü ve Ahlak Bilgisi 11 anadolu lisesi.xlsx",
-          "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 11 anadolu lisesi.xlsx",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%2011%20anadolu%20lisesi.xlsx",
-          "grades": [
-            9,
-            10,
-            11,
-            12
-          ]
-        },
-        {
-          "id": "anadolu",
-          "title": "Anadolu Lisesi",
-          "fileName": "Din Kültürü ve Ahlak Bilgisi 12 anadolu lisesi.xlsx",
-          "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 12 anadolu lisesi.xlsx",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%2012%20anadolu%20lisesi.xlsx",
-          "grades": [
-            12
-          ]
-        },
-        {
-          "id": "anadolu",
-          "title": "Anadolu Lisesi",
           "fileName": "Din Kültürü ve Ahlak Bilgisi 9 anadolu lisesi.xlsx",
           "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 9 anadolu lisesi.xlsx",
           "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%209%20anadolu%20lisesi.xlsx",
@@ -73,6 +50,87 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9
+              ],
+              "fileName": "Din Kültürü ve Ahlak Bilgisi 9 anadolu lisesi.xlsx",
+              "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 9 anadolu lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%209%20anadolu%20lisesi.xlsx"
+            },
+            {
+              "grades": [
+                10
+              ],
+              "fileName": "Din Kültürü ve Ahlak Bilgisi 10 anadolu lisesi.xlsx",
+              "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 10 anadolu lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%2010%20anadolu%20lisesi.xlsx"
+            },
+            {
+              "grades": [
+                11
+              ],
+              "fileName": "Din Kültürü ve Ahlak Bilgisi 11 anadolu lisesi.xlsx",
+              "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 11 anadolu lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%2011%20anadolu%20lisesi.xlsx"
+            },
+            {
+              "grades": [
+                12
+              ],
+              "fileName": "Din Kültürü ve Ahlak Bilgisi 12 anadolu lisesi.xlsx",
+              "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 12 anadolu lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%2012%20anadolu%20lisesi.xlsx"
+            }
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Din Kültürü ve Ahlak Bilgisi 9 anadolu lisesi.xlsx",
+          "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 9 anadolu lisesi.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%209%20anadolu%20lisesi.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "files": [
+            {
+              "grades": [
+                9
+              ],
+              "fileName": "Din Kültürü ve Ahlak Bilgisi 9 anadolu lisesi.xlsx",
+              "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 9 anadolu lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%209%20anadolu%20lisesi.xlsx"
+            },
+            {
+              "grades": [
+                10
+              ],
+              "fileName": "Din Kültürü ve Ahlak Bilgisi 10 anadolu lisesi.xlsx",
+              "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 10 anadolu lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%2010%20anadolu%20lisesi.xlsx"
+            },
+            {
+              "grades": [
+                11
+              ],
+              "fileName": "Din Kültürü ve Ahlak Bilgisi 11 anadolu lisesi.xlsx",
+              "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 11 anadolu lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%2011%20anadolu%20lisesi.xlsx"
+            },
+            {
+              "grades": [
+                12
+              ],
+              "fileName": "Din Kültürü ve Ahlak Bilgisi 12 anadolu lisesi.xlsx",
+              "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 12 anadolu lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%2012%20anadolu%20lisesi.xlsx"
+            }
           ]
         }
       ]
@@ -176,6 +234,19 @@
         {
           "id": "anadolu",
           "title": "Anadolu Lisesi",
+          "fileName": "Anadolu Liseleri Türk Dili ve Edebiyatı.xlsx",
+          "path": "Türk Dili ve Edebiyatı/Anadolu Liseleri Türk Dili ve Edebiyatı.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1/Anadolu%20Liseleri%20T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
           "fileName": "Anadolu Liseleri Türk Dili ve Edebiyatı.xlsx",
           "path": "Türk Dili ve Edebiyatı/Anadolu Liseleri Türk Dili ve Edebiyatı.xlsx",
           "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1/Anadolu%20Liseleri%20T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1.xlsx",
