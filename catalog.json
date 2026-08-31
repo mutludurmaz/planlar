@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T14:31:47Z",
+  "generatedAt": "2026-08-31T18:45:32Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
     {
@@ -167,19 +167,6 @@
       "title": "Fizik",
       "path": "Fizik",
       "schools": [
-        {
-          "id": "anadolu",
-          "title": "Anadolu Lisesi",
-          "fileName": "Fizik Anadolu Liseleri.xlsx",
-          "path": "Fizik/Fizik Anadolu Liseleri.xlsx",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Fizik/Fizik%20Anadolu%20Liseleri.xlsx",
-          "grades": [
-            9,
-            10,
-            11,
-            12
-          ]
-        },
         {
           "id": "fen",
           "title": "Fen Lisesi",
