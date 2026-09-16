@@ -4,6 +4,9 @@ on:
   push:
     paths:
       - "**/*.xlsx"
+      - "**/*.docx"
+      - "**/*.doc"
+      - "**/*.pdf"
       - "scripts/build_catalog.py"
       - ".github/workflows/catalog.yml"
   workflow_dispatch:
