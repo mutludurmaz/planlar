@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T19:58:08Z",
+  "generatedAt": "2026-09-16T19:22:42Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
     {
@@ -592,6 +592,25 @@
               "path": "Müzik/Müzik 11 ve 12 Anadolu Lisesi.xlsx",
               "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/M%C3%BCzik/M%C3%BCzik%2011%20ve%2012%20Anadolu%20Lisesi.xlsx"
             }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Proje Uygulamaları ve Tasarım",
+      "path": "Proje Uygulamaları ve Tasarım",
+      "schools": [
+        {
+          "id": "diger",
+          "title": "Puvt",
+          "fileName": "Puvt.docx",
+          "path": "Proje Uygulamaları ve Tasarım/Puvt.docx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Proje%20Uygulamalar%C4%B1%20ve%20Tasar%C4%B1m/Puvt.docx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
           ]
         }
       ]
