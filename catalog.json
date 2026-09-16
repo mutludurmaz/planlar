@@ -1,306 +1,835 @@
-#!/usr/bin/env python3
-"""planlar deposundaki .xlsx, .pdf, .docx ve .doc dosyalarindan catalog.json uretir."""
-
-from __future__ import annotations
-
-import json
-import re
-import unicodedata
-from datetime import datetime, timezone
-from pathlib import Path
-from urllib.parse import quote
-
-ROOT = Path(__file__).resolve().parents[1]
-REPO = "mutludurmaz/planlar"
-BRANCH = "main"
-RAW_BASE = f"https://raw.githubusercontent.com/{REPO}/{BRANCH}"
-OUT = ROOT / "catalog.json"
-GRADE_RE = re.compile(r"(?<!\d)(9|10|11|12)(?!\d)")
-
-# Taranacak desteklenen dosya uzantıları
-SUPPORTED_EXTENSIONS = {".xlsx", ".pdf", ".docx", ".doc"}
-
-# Tüm standart okul türleri ve başlıkları
-ALL_STANDARD_SCHOOLS = [
-    ("anadolu", "Anadolu Lisesi"),
-    ("fen", "Fen Lisesi"),
-    ("sosyal_bilimler", "Sosyal Bilimler Lisesi"),
-    ("imam_hatip", "Anadolu İmam Hatip Lisesi"),
-    ("meslek", "Mesleki ve Teknik Anadolu Lisesi"),
-    ("guzel_sanatlar", "Güzel Sanatlar Lisesi"),
-    ("spor", "Spor Lisesi"),
-]
-
-SCHOOL_ORDER = {school_id: idx for idx, (school_id, _) in enumerate(ALL_STANDARD_SCHOOLS)}
-
-
-def fold(text: str) -> str:
-    n = unicodedata.normalize("NFKC", text).casefold()
-    return (
-        n.replace("ı", "i")
-        .replace("i̇", "i")
-        .replace("â", "a")
-        .replace("ê", "e")
-        .replace("î", "i")
-        .replace("û", "u")
-    )
-
-
-def school_type(file_stem: str) -> tuple[str, str]:
-    n = fold(file_stem)
-
-    # 1. Sosyal Bilimler Lisesi
-    if "sosyal bilim" in n or "sbl" in n:
-        return "sosyal_bilimler", "Sosyal Bilimler Lisesi"
-
-    # 2. Anadolu İmam Hatip Lisesi
-    if "imam hatip" in n or "aihl" in n:
-        return "imam_hatip", "Anadolu İmam Hatip Lisesi"
-
-    # 3. Mesleki ve Teknik Anadolu Lisesi / Çok Programlı
-    if "meslek" in n or "mtal" in n or "teknik lise" in n or "cok programli" in n or "cpal" in n:
-        return "meslek", "Mesleki ve Teknik Anadolu Lisesi"
-
-    # 4. Güzel Sanatlar Lisesi
-    if "guzel sanat" in n or "gsl" in n:
-        return "guzel_sanatlar", "Güzel Sanatlar Lisesi"
-
-    # 5. Spor Lisesi
-    if "spor lise" in n:
-        return "spor", "Spor Lisesi"
-
-    # 6. Fen Lisesi
-    if "fen lise" in n or "fl" in n.split():
-        return "fen", "Fen Lisesi"
-
-    # 7. Anadolu Lisesi
-    if "anadolu lise" in n or "anadolu" in n or "al" in n.split():
-        return "anadolu", "Anadolu Lisesi"
-
-    # Tanımlanamayan veya genel/belirtilmemiş dosyalar
-    return "diger", file_stem.strip()
-
-
-def posix_path(path: Path) -> str:
-    return path.relative_to(ROOT).as_posix()
-
-
-def raw_url(rel: str) -> str:
-    encoded = "/".join(quote(part) for part in rel.split("/"))
-    return f"{RAW_BASE}/{encoded}"
-
-
-def grades_from_text(text: str) -> list[int]:
-    found: list[int] = []
-    for match in GRADE_RE.finditer(text):
-        grade = int(match.group(1))
-        if grade not in found:
-            found.append(grade)
-    found.sort()
-    return found
-
-
-def grades_from_sheets(path: Path) -> list[int]:
-    try:
-        from openpyxl import load_workbook
-    except ImportError:
-        return [9, 10, 11, 12]
-    try:
-        wb = load_workbook(path, read_only=True, data_only=True)
-        names = list(wb.sheetnames)
-        wb.close()
-    except Exception:
-        return [9, 10, 11, 12]
-    found: list[int] = []
-    for name in names:
-        n = fold(name)
-        if "hafta" in n or "week" in n:
-            continue
-        match = GRADE_RE.search(name)
-        if not match:
-            continue
-        grade = int(match.group(1))
-        if grade not in found:
-            found.append(grade)
-    found.sort()
-    return found or [9, 10, 11, 12]
-
-
-def grades_for_file(path: Path) -> list[int]:
-    from_name = grades_from_text(path.stem)
-    if from_name:
-        return from_name
-    # Yalnızca Excel dosyası ise sayfa isimlerinden sınıf tespiti yap
-    if path.suffix.lower() == ".xlsx":
-        return grades_from_sheets(path)
-    # PDF veya Word dosyalarında isimde sınıf yoksa tüm kademelere ata
-    return [9, 10, 11, 12]
-
-
-def file_entry(path: Path, grades: list[int]) -> dict:
-    rel = posix_path(path)
-    return {
-        "fileName": path.name,
-        "path": rel,
-        "downloadUrl": raw_url(rel),
-        "grades": grades,
-    }
-
-
-def collapse_school_group(group: list[dict]) -> dict:
-    if len(group) == 1:
-        return group[0]
-    ordered = sorted(
-        group,
-        key=lambda item: (min(item["grades"] or [99]), fold(item["fileName"])),
-    )
-    files = [
+{
+  "version": 1,
+  "generatedAt": "2026-09-16T20:21:30Z",
+  "source": "https://github.com/mutludurmaz/planlar",
+  "subjects": [
+    {
+      "title": "Beden Eğitimi ve Spor",
+      "path": "Beden Eğitimi ve Spor",
+      "schools": [
         {
-            "grades": item["grades"],
-            "fileName": item["fileName"],
-            "path": item["path"],
-            "downloadUrl": item["downloadUrl"],
+          "id": "diger",
+          "title": "Beden Eğitimi ve Spor Dersi",
+          "fileName": "Beden Eğitimi ve Spor Dersi.xlsx",
+          "path": "Beden Eğitimi ve Spor/Beden Eğitimi ve Spor Dersi.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Beden%20E%C4%9Fitimi%20ve%20Spor/Beden%20E%C4%9Fitimi%20ve%20Spor%20Dersi.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
         }
-        for item in ordered
-    ]
-    grades: list[int] = []
-    for item in ordered:
-        for grade in item["grades"]:
-            if grade not in grades:
-                grades.append(grade)
-    grades.sort()
-    primary = max(
-        ordered,
-        key=lambda item: (len(item["grades"]), -min(item["grades"] or [99])),
-    )
-    return {
-        "id": group[0]["id"],
-        "title": group[0]["title"],
-        "fileName": primary["fileName"],
-        "path": primary["path"],
-        "downloadUrl": primary["downloadUrl"],
-        "grades": grades,
-        "files": files,
-    }
-
-
-def merge_schools(schools: list[dict]) -> list[dict]:
-    grouped: dict[str, list[dict]] = {}
-    other: list[dict] = []
-
-    for school in schools:
-        if school["id"] != "diger":
-            grouped.setdefault(school["id"], []).append(school)
-        else:
-            other.append(school)
-
-    merged: list[dict] = []
-    for school_id, group in grouped.items():
-        merged.append(collapse_school_group(group))
-
-    existing_ids = {school["id"] for school in merged}
-
-    # Varsayılan şablon olarak kullanılacak planı belirle:
-    # 1. 'anadolu' varsa onu al
-    # 2. 'anadolu' yok ama okul türü belirtilmemiş ('diger') tek bir plan varsa onu Anadolu yap ve temel al
-    base_school = None
-    if "anadolu" in existing_ids:
-        base_school = next(s for s in merged if s["id"] == "anadolu")
-    elif other:
-        # Belirtilmemiş ilk dosyayı varsayılan/anadolu planı olarak kullan
-        default_item = collapse_school_group(other)
-        base_school = json.loads(json.dumps(default_item))
-        base_school["id"] = "anadolu"
-        base_school["title"] = "Anadolu Lisesi"
-        merged.append(base_school)
-        existing_ids.add("anadolu")
-
-    # Eğer temel bir planımız varsa (Anadolu veya belirtilmemiş plan),
-    # dosyası olmayan TÜM liseler için bu planı otomatik çoğalt
-    if base_school:
-        for sch_id, sch_title in ALL_STANDARD_SCHOOLS:
-            if sch_id not in existing_ids:
-                cloned = json.loads(json.dumps(base_school))
-                cloned["id"] = sch_id
-                cloned["title"] = sch_title
-                merged.append(cloned)
-                existing_ids.add(sch_id)
-
-    # Eğer 'diger' dosyaları kullanmadıysak ekle, kullandıysak listeye tekrar ekleyip mükerrer yapma
-    if not base_school or "diger" in existing_ids:
-        merged.extend(other)
-
-    return merged
-
-
-def build() -> dict:
-    by_subject: dict[str, dict] = {}
-
-    # Desteklenen uzantılara sahip dosyaları tara (geçici ofis dosyalarını atla)
-    files = sorted(
-        (
-            p for p in ROOT.rglob("*")
-            if p.is_file()
-            and p.suffix.lower() in SUPPORTED_EXTENSIONS
-            and ".git" not in p.parts
-            and not p.name.startswith("~$")
-        ),
-        key=lambda p: (fold(p.parent.name), fold(p.name)),
-    )
-
-    for path in files:
-        if path.parent == ROOT:
-            continue
-        subject = path.parent.name
-        school_id, school_label = school_type(path.stem)
-        grades = grades_for_file(path)
-        school = {
-            "id": school_id,
-            "title": school_label,
-            **file_entry(path, grades),
+      ]
+    },
+    {
+      "title": "Biyoloji",
+      "path": "Biyoloji",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "BİYOLOJİ ANADOLU LİSESİ.xlsx",
+          "path": "Biyoloji/BİYOLOJİ ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Biyoloji/B%C4%B0YOLOJ%C4%B0%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "BİYOLOJİ FEN LİSESI.xlsx",
+          "path": "Biyoloji/BİYOLOJİ FEN LİSESI.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Biyoloji/BI%CC%87YOLOJI%CC%87%20FEN%20LI%CC%87SESI.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
         }
-        bucket = by_subject.setdefault(
-            subject,
+      ]
+    },
+    {
+      "title": "Coğrafya",
+      "path": "Coğrafya",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Coğrafya ANADOLU LİSESİ.xlsx",
+          "path": "Coğrafya/Coğrafya ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Co%C4%9Frafya/Co%C4%9Frafya%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Coğrafya FEN LİSESİ.xlsx",
+          "path": "Coğrafya/Coğrafya FEN LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Co%C4%9Frafya/Co%C4%9Frafya%20FEN%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Coğrafya SOSYAL BİLİMLER LİSESİ",
+          "fileName": "Coğrafya SOSYAL BİLİMLER LİSESİ.xlsx",
+          "path": "Coğrafya/Coğrafya SOSYAL BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Co%C4%9Frafya/Co%C4%9Frafya%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Din Kültürü ve Ahlak bilgisi",
+      "path": "Din Kültürü ve Ahlak bilgisi",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Din Kültürü ve Ahlak Bilgisi 9 anadolu lisesi.xlsx",
+          "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 9 anadolu lisesi.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%209%20anadolu%20lisesi.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "files": [
             {
-                "title": subject,
-                "path": path.parent.relative_to(ROOT).as_posix(),
-                "schools": [],
+              "grades": [
+                9
+              ],
+              "fileName": "Din Kültürü ve Ahlak Bilgisi 9 anadolu lisesi.xlsx",
+              "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 9 anadolu lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%209%20anadolu%20lisesi.xlsx"
             },
-        )
-        bucket["schools"].append(school)
-
-    subjects = list(by_subject.values())
-    subjects.sort(key=lambda item: fold(item["title"]))
-    for subject in subjects:
-        subject["schools"] = merge_schools(subject["schools"])
-        subject["schools"].sort(
-            key=lambda item: (
-                SCHOOL_ORDER.get(item["id"], 99),
-                fold(item["title"]),
-            )
-        )
-    return {
-        "version": 1,
-        "generatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "source": f"https://github.com/{REPO}",
-        "subjects": subjects,
+            {
+              "grades": [
+                10
+              ],
+              "fileName": "Din Kültürü ve Ahlak Bilgisi 10 anadolu lisesi.xlsx",
+              "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 10 anadolu lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%2010%20anadolu%20lisesi.xlsx"
+            },
+            {
+              "grades": [
+                11
+              ],
+              "fileName": "Din Kültürü ve Ahlak Bilgisi 11 anadolu lisesi.xlsx",
+              "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 11 anadolu lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%2011%20anadolu%20lisesi.xlsx"
+            },
+            {
+              "grades": [
+                12
+              ],
+              "fileName": "Din Kültürü ve Ahlak Bilgisi 12 anadolu lisesi.xlsx",
+              "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 12 anadolu lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%2012%20anadolu%20lisesi.xlsx"
+            }
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Din Kültürü ve Ahlak Bilgisi 9 anadolu lisesi.xlsx",
+          "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 9 anadolu lisesi.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%209%20anadolu%20lisesi.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "files": [
+            {
+              "grades": [
+                9
+              ],
+              "fileName": "Din Kültürü ve Ahlak Bilgisi 9 anadolu lisesi.xlsx",
+              "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 9 anadolu lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%209%20anadolu%20lisesi.xlsx"
+            },
+            {
+              "grades": [
+                10
+              ],
+              "fileName": "Din Kültürü ve Ahlak Bilgisi 10 anadolu lisesi.xlsx",
+              "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 10 anadolu lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%2010%20anadolu%20lisesi.xlsx"
+            },
+            {
+              "grades": [
+                11
+              ],
+              "fileName": "Din Kültürü ve Ahlak Bilgisi 11 anadolu lisesi.xlsx",
+              "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 11 anadolu lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%2011%20anadolu%20lisesi.xlsx"
+            },
+            {
+              "grades": [
+                12
+              ],
+              "fileName": "Din Kültürü ve Ahlak Bilgisi 12 anadolu lisesi.xlsx",
+              "path": "Din Kültürü ve Ahlak bilgisi/Din Kültürü ve Ahlak Bilgisi 12 anadolu lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20bilgisi/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%2012%20anadolu%20lisesi.xlsx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Felsefe",
+      "path": "Felsefe",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Felsefe ANADOLU LİSESİ.xlsx",
+          "path": "Felsefe/Felsefe ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Felsefe/Felsefe%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            10,
+            11
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Felsefe ANADOLU LİSESİ.xlsx",
+          "path": "Felsefe/Felsefe ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Felsefe/Felsefe%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            10,
+            11
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Felsefe FEN BİLİMLER LİSESİ",
+          "fileName": "Felsefe FEN BİLİMLER LİSESİ.xlsx",
+          "path": "Felsefe/Felsefe FEN BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Felsefe/Felsefe%20FEN%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            10,
+            11
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Felsefe SOSYAL BİLİMLER LİSESİ",
+          "fileName": "Felsefe SOSYAL BİLİMLER LİSESİ.xlsx",
+          "path": "Felsefe/Felsefe SOSYAL BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Felsefe/Felsefe%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            10,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Fizik",
+      "path": "Fizik",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Fizik ANADOLU LİSESİ.xlsx",
+          "path": "Fizik/Fizik ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Fizik/Fizik%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Fizik FEN LİSESİ.xlsx",
+          "path": "Fizik/Fizik FEN LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Fizik/Fizik%20FEN%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Fizik SOSYAL BİLİMLER LİSESİ",
+          "fileName": "Fizik SOSYAL BİLİMLER LİSESİ.xlsx",
+          "path": "Fizik/Fizik SOSYAL BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Fizik/Fizik%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Görsel Sanatlar",
+      "path": "Görsel Sanatlar",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "GÖRSEL SANATLAR Anadolu Lisesi.xlsx",
+          "path": "Görsel Sanatlar/GÖRSEL SANATLAR Anadolu Lisesi.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/G%C3%B6rsel%20Sanatlar/G%C3%96RSEL%20SANATLAR%20Anadolu%20Lisesi.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "GÖRSEL SANATLAR Anadolu Lisesi.xlsx",
+          "path": "Görsel Sanatlar/GÖRSEL SANATLAR Anadolu Lisesi.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/G%C3%B6rsel%20Sanatlar/G%C3%96RSEL%20SANATLAR%20Anadolu%20Lisesi.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "title": "İngilizce",
+      "path": "İngilizce",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "İNGİLİZCE Anadolu Lisesi.xlsx",
+          "path": "İngilizce/İNGİLİZCE Anadolu Lisesi.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/%C4%B0ngilizce/%C4%B0NG%C4%B0L%C4%B0ZCE%20Anadolu%20Lisesi.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "İNGİLİZCE Anadolu Lisesi.xlsx",
+              "path": "İngilizce/İNGİLİZCE Anadolu Lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/%C4%B0ngilizce/%C4%B0NG%C4%B0L%C4%B0ZCE%20Anadolu%20Lisesi.xlsx"
+            },
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "İNGİLİZCE Hazrılık Anadolu Lisesi.xlsx",
+              "path": "İngilizce/İNGİLİZCE Hazrılık Anadolu Lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/%C4%B0ngilizce/%C4%B0NG%C4%B0L%C4%B0ZCE%20Hazr%C4%B1l%C4%B1k%20Anadolu%20Lisesi.xlsx"
+            }
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "İNGİLİZCE Anadolu Lisesi.xlsx",
+          "path": "İngilizce/İNGİLİZCE Anadolu Lisesi.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/%C4%B0ngilizce/%C4%B0NG%C4%B0L%C4%B0ZCE%20Anadolu%20Lisesi.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "İNGİLİZCE Anadolu Lisesi.xlsx",
+              "path": "İngilizce/İNGİLİZCE Anadolu Lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/%C4%B0ngilizce/%C4%B0NG%C4%B0L%C4%B0ZCE%20Anadolu%20Lisesi.xlsx"
+            },
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "İNGİLİZCE Hazrılık Anadolu Lisesi.xlsx",
+              "path": "İngilizce/İNGİLİZCE Hazrılık Anadolu Lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/%C4%B0ngilizce/%C4%B0NG%C4%B0L%C4%B0ZCE%20Hazr%C4%B1l%C4%B1k%20Anadolu%20Lisesi.xlsx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Kimya",
+      "path": "Kimya",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Kimya ANADOLU LİSESİ.xlsx",
+          "path": "Kimya/Kimya ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Kimya/Kimya%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Kimya FEN LİSESİ.xlsx",
+          "path": "Kimya/Kimya FEN LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Kimya/Kimya%20FEN%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Kimya SOSYAL BİLİMLER LİSESİ",
+          "fileName": "Kimya SOSYAL BİLİMLER LİSESİ.xlsx",
+          "path": "Kimya/Kimya SOSYAL BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Kimya/Kimya%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Mantık",
+      "path": "Mantık",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Mantık ANADOLU LİSESi.xlsx",
+          "path": "Mantık/Mantık ANADOLU LİSESi.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Mant%C4%B1k/Mant%C4%B1k%20ANADOLU%20L%C4%B0SESi.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Mantık ANADOLU LİSESi.xlsx",
+          "path": "Mantık/Mantık ANADOLU LİSESi.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Mant%C4%B1k/Mant%C4%B1k%20ANADOLU%20L%C4%B0SESi.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Mantık SOSYAL BİLİMLER LİSESİ",
+          "fileName": "Mantık SOSYAL BİLİMLER LİSESİ.xlsx",
+          "path": "Mantık/Mantık SOSYAL BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Mant%C4%B1k/Mant%C4%B1k%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Matematik",
+      "path": "Matematik",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Matematik ANADOLU LİSESİ.xlsx",
+          "path": "Matematik/Matematik ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Matematik/Matematik%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Matematik FEN LİSESİ.xlsx",
+          "path": "Matematik/Matematik FEN LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Matematik/Matematik%20FEN%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Müzik",
+      "path": "Müzik",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Müzik 9 ve 10 Anadolu Lisesi.xlsx",
+          "path": "Müzik/Müzik 9 ve 10 Anadolu Lisesi.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/M%C3%BCzik/M%C3%BCzik%209%20ve%2010%20Anadolu%20Lisesi.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10
+              ],
+              "fileName": "Müzik 9 ve 10 Anadolu Lisesi.xlsx",
+              "path": "Müzik/Müzik 9 ve 10 Anadolu Lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/M%C3%BCzik/M%C3%BCzik%209%20ve%2010%20Anadolu%20Lisesi.xlsx"
+            },
+            {
+              "grades": [
+                11,
+                12
+              ],
+              "fileName": "Müzik 11 ve 12 Anadolu Lisesi.xlsx",
+              "path": "Müzik/Müzik 11 ve 12 Anadolu Lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/M%C3%BCzik/M%C3%BCzik%2011%20ve%2012%20Anadolu%20Lisesi.xlsx"
+            }
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Müzik 9 ve 10 Anadolu Lisesi.xlsx",
+          "path": "Müzik/Müzik 9 ve 10 Anadolu Lisesi.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/M%C3%BCzik/M%C3%BCzik%209%20ve%2010%20Anadolu%20Lisesi.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10
+              ],
+              "fileName": "Müzik 9 ve 10 Anadolu Lisesi.xlsx",
+              "path": "Müzik/Müzik 9 ve 10 Anadolu Lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/M%C3%BCzik/M%C3%BCzik%209%20ve%2010%20Anadolu%20Lisesi.xlsx"
+            },
+            {
+              "grades": [
+                11,
+                12
+              ],
+              "fileName": "Müzik 11 ve 12 Anadolu Lisesi.xlsx",
+              "path": "Müzik/Müzik 11 ve 12 Anadolu Lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/M%C3%BCzik/M%C3%BCzik%2011%20ve%2012%20Anadolu%20Lisesi.xlsx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Proje Uygulamaları ve Tasarım",
+      "path": "Proje Uygulamaları ve Tasarım",
+      "schools": [
+        {
+          "id": "diger",
+          "title": "Puvt",
+          "fileName": "Puvt.docx",
+          "path": "Proje Uygulamaları ve Tasarım/Puvt.docx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Proje%20Uygulamalar%C4%B1%20ve%20Tasar%C4%B1m/Puvt.docx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Psikoloji",
+      "path": "Psikoloji",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Psikoloji ANADOLU LİSESİ.xlsx",
+          "path": "Psikoloji/Psikoloji ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Psikoloji/Psikoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Psikoloji ANADOLU LİSESİ.xlsx",
+          "path": "Psikoloji/Psikoloji ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Psikoloji/Psikoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Psikoloji SOSYAL BİLİMLER LİSESİ",
+          "fileName": "Psikoloji SOSYAL BİLİMLER LİSESİ.xlsx",
+          "path": "Psikoloji/Psikoloji SOSYAL BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Psikoloji/Psikoloji%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Sosyal Bilim Çalışmaları",
+      "path": "Sosyal Bilim Çalışmaları",
+      "schools": [
+        {
+          "id": "diger",
+          "title": "Sosyal Bilim Çalışmaları 1 SOSYAL BİLİMLER LİSESİ",
+          "fileName": "Sosyal Bilim Çalışmaları 1 SOSYAL BİLİMLER LİSESİ.xlsx",
+          "path": "Sosyal Bilim Çalışmaları/Sosyal Bilim Çalışmaları 1 SOSYAL BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyal%20Bilim%20%C3%87al%C4%B1%C5%9Fmalar%C4%B1/Sosyal%20Bilim%20%C3%87al%C4%B1%C5%9Fmalar%C4%B1%201%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Sosyal Bilim Çalışmaları 2 SOSYAL BİLİMLER LİSESi",
+          "fileName": "Sosyal Bilim Çalışmaları 2 SOSYAL BİLİMLER LİSESi.xlsx",
+          "path": "Sosyal Bilim Çalışmaları/Sosyal Bilim Çalışmaları 2 SOSYAL BİLİMLER LİSESi.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyal%20Bilim%20%C3%87al%C4%B1%C5%9Fmalar%C4%B1/Sosyal%20Bilim%20%C3%87al%C4%B1%C5%9Fmalar%C4%B1%202%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SESi.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Sosyal Bilim Çalışmaları 3 SOSYAL BİLİMLER LİSESİ",
+          "fileName": "Sosyal Bilim Çalışmaları 3 SOSYAL BİLİMLER LİSESİ.xlsx",
+          "path": "Sosyal Bilim Çalışmaları/Sosyal Bilim Çalışmaları 3 SOSYAL BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyal%20Bilim%20%C3%87al%C4%B1%C5%9Fmalar%C4%B1/Sosyal%20Bilim%20%C3%87al%C4%B1%C5%9Fmalar%C4%B1%203%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Sosyoloji",
+      "path": "Sosyoloji",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Sosyoloji ANADOLU LİSESİ.xlsx",
+          "path": "Sosyoloji/Sosyoloji ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyoloji/Sosyoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            11
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Sosyoloji ANADOLU LİSESİ.xlsx",
+          "path": "Sosyoloji/Sosyoloji ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyoloji/Sosyoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            11
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Sosyoloji SOSYAL BİLİMLER LİSESİ",
+          "fileName": "Sosyoloji SOSYAL BİLİMLER LİSESİ.xlsx",
+          "path": "Sosyoloji/Sosyoloji SOSYAL BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyoloji/Sosyoloji%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Tarih",
+      "path": "Tarih",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Tarih ANADOLU LİSESİ.xlsx",
+          "path": "Tarih/Tarih ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Tarih/Tarih%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Tarih FEN LİSESİ.xlsx",
+          "path": "Tarih/Tarih FEN LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Tarih/Tarih%20FEN%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Tarih SOSYAL BİLİMLER LİSESİ",
+          "fileName": "Tarih SOSYAL BİLİMLER LİSESİ.xlsx",
+          "path": "Tarih/Tarih SOSYAL BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Tarih/Tarih%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Türk Dili ve Edebiyatı",
+      "path": "Türk Dili ve Edebiyatı",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "Türk Dili ve Edebiyatı ANADOLU LİSESİ.xlsx",
+          "path": "Türk Dili ve Edebiyatı/Türk Dili ve Edebiyatı ANADOLU LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "Türk Dili ve Edebiyatı FEN LİSESİ.xlsx",
+          "path": "Türk Dili ve Edebiyatı/Türk Dili ve Edebiyatı FEN LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1%20FEN%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Türk Dili ve Edebiyatı SOSYAL BİLİMLER LİSESİ",
+          "fileName": "Türk Dili ve Edebiyatı SOSYAL BİLİMLER LİSESİ.xlsx",
+          "path": "Türk Dili ve Edebiyatı/Türk Dili ve Edebiyatı SOSYAL BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ]
     }
-
-
-def main() -> None:
-    catalog = build()
-    OUT.write_text(
-        json.dumps(catalog, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
-    schools = sum(len(s["schools"]) for s in catalog["subjects"])
-    files = sum(
-        len(school.get("files") or [school])
-        for subject in catalog["subjects"]
-        for school in subject["schools"]
-    )
-    print(f"catalog.json: {len(catalog['subjects'])} ders, {schools} okul, {files} dosya")
-
-
-if __name__ == "__main__":
-    main()
+  ]
+}
