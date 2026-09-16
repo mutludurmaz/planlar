@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""planlar deposundaki .xlsx dosyalarindan catalog.json uretir."""
+"""planlar deposundaki .xlsx, .pdf, .docx ve .doc dosyalarindan catalog.json uretir."""
 
 from __future__ import annotations
 
@@ -16,6 +16,9 @@ BRANCH = "main"
 RAW_BASE = f"https://raw.githubusercontent.com/{REPO}/{BRANCH}"
 OUT = ROOT / "catalog.json"
 GRADE_RE = re.compile(r"(?<!\d)(9|10|11|12)(?!\d)")
+
+# Taranacak desteklenen dosya uzantıları
+SUPPORTED_EXTENSIONS = {".xlsx", ".pdf", ".docx", ".doc"}
 
 
 def fold(text: str) -> str:
@@ -88,7 +91,11 @@ def grades_for_file(path: Path) -> list[int]:
     from_name = grades_from_text(path.stem)
     if from_name:
         return from_name
-    return grades_from_sheets(path)
+    # Yalnızca Excel dosyası ise sayfa isimlerinden sınıf tespiti yap
+    if path.suffix.lower() == ".xlsx":
+        return grades_from_sheets(path)
+    # PDF veya Word dosyalarında isimde sınıf yoksa tüm kademelere ata
+    return [9, 10, 11, 12]
 
 
 def file_entry(path: Path, grades: list[int]) -> dict:
@@ -164,10 +171,19 @@ def merge_schools(schools: list[dict]) -> list[dict]:
 
 def build() -> dict:
     by_subject: dict[str, dict] = {}
+    
+    # Desteklenen uzantılara sahip dosyaları tara (geçici ofis dosyalarını atla)
     files = sorted(
-        (p for p in ROOT.rglob("*.xlsx") if ".git" not in p.parts),
+        (
+            p for p in ROOT.rglob("*")
+            if p.is_file()
+            and p.suffix.lower() in SUPPORTED_EXTENSIONS
+            and ".git" not in p.parts
+            and not p.name.startswith("~$")
+        ),
         key=lambda p: (fold(p.parent.name), fold(p.name)),
     )
+    
     for path in files:
         if path.parent == ROOT:
             continue
@@ -224,3 +240,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+   
