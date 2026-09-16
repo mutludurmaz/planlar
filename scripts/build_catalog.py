@@ -17,8 +17,20 @@ RAW_BASE = f"https://raw.githubusercontent.com/{REPO}/{BRANCH}"
 OUT = ROOT / "catalog.json"
 GRADE_RE = re.compile(r"(?<!\d)(9|10|11|12)(?!\d)")
 
-# Taranacak desteklenen dosya uzantıları
+# Taranacak dosya uzantıları
 SUPPORTED_EXTENSIONS = {".xlsx", ".pdf", ".docx", ".doc"}
+
+ALL_STANDARD_SCHOOLS = [
+    ("anadolu", "Anadolu Lisesi"),
+    ("fen", "Fen Lisesi"),
+    ("sosyal_bilimler", "Sosyal Bilimler Lisesi"),
+    ("imam_hatip", "Anadolu İmam Hatip Lisesi"),
+    ("meslek", "Mesleki ve Teknik Anadolu Lisesi"),
+    ("guzel_sanatlar", "Güzel Sanatlar Lisesi"),
+    ("spor", "Spor Lisesi"),
+]
+
+SCHOOL_ORDER = {school_id: idx for idx, (school_id, _) in enumerate(ALL_STANDARD_SCHOOLS)}
 
 
 def fold(text: str) -> str:
@@ -35,10 +47,22 @@ def fold(text: str) -> str:
 
 def school_type(file_stem: str) -> tuple[str, str]:
     n = fold(file_stem)
-    if "fen lise" in n:
+
+    if "sosyal bilim" in n or "sbl" in n:
+        return "sosyal_bilimler", "Sosyal Bilimler Lisesi"
+    if "imam hatip" in n or "aihl" in n:
+        return "imam_hatip", "Anadolu İmam Hatip Lisesi"
+    if "meslek" in n or "mtal" in n or "teknik lise" in n or "cok programli" in n or "cpal" in n:
+        return "meslek", "Mesleki ve Teknik Anadolu Lisesi"
+    if "guzel sanat" in n or "gsl" in n:
+        return "guzel_sanatlar", "Güzel Sanatlar Lisesi"
+    if "spor lise" in n:
+        return "spor", "Spor Lisesi"
+    if "fen lise" in n or "fl" in n.split():
         return "fen", "Fen Lisesi"
-    if "anadolu lise" in n:
+    if "anadolu lise" in n or "anadolu" in n or "al" in n.split():
         return "anadolu", "Anadolu Lisesi"
+
     return "diger", file_stem.strip()
 
 
@@ -91,10 +115,8 @@ def grades_for_file(path: Path) -> list[int]:
     from_name = grades_from_text(path.stem)
     if from_name:
         return from_name
-    # Yalnızca Excel dosyası ise sayfa isimlerinden sınıf tespiti yap
     if path.suffix.lower() == ".xlsx":
         return grades_from_sheets(path)
-    # PDF veya Word dosyalarında isimde sınıf yoksa tüm kademelere ata
     return [9, 10, 11, 12]
 
 
@@ -148,31 +170,48 @@ def collapse_school_group(group: list[dict]) -> dict:
 def merge_schools(schools: list[dict]) -> list[dict]:
     grouped: dict[str, list[dict]] = {}
     other: list[dict] = []
+
     for school in schools:
-        if school["id"] in ("anadolu", "fen"):
+        if school["id"] != "diger":
             grouped.setdefault(school["id"], []).append(school)
         else:
             other.append(school)
+
     merged: list[dict] = []
-    for school_id in ("anadolu", "fen"):
-        group = grouped.get(school_id)
-        if group:
-            merged.append(collapse_school_group(group))
-    merged.extend(other)
-    ids = {school["id"] for school in merged}
-    if "anadolu" in ids and "fen" not in ids:
-        anadolu = next(school for school in merged if school["id"] == "anadolu")
-        fen = json.loads(json.dumps(anadolu))
-        fen["id"] = "fen"
-        fen["title"] = "Fen Lisesi"
-        merged.append(fen)
+    for school_id, group in grouped.items():
+        merged.append(collapse_school_group(group))
+
+    existing_ids = {school["id"] for school in merged}
+
+    base_school = None
+    if "anadolu" in existing_ids:
+        base_school = next(s for s in merged if s["id"] == "anadolu")
+    elif other:
+        default_item = collapse_school_group(other)
+        base_school = json.loads(json.dumps(default_item))
+        base_school["id"] = "anadolu"
+        base_school["title"] = "Anadolu Lisesi"
+        merged.append(base_school)
+        existing_ids.add("anadolu")
+
+    if base_school:
+        for sch_id, sch_title in ALL_STANDARD_SCHOOLS:
+            if sch_id not in existing_ids:
+                cloned = json.loads(json.dumps(base_school))
+                cloned["id"] = sch_id
+                cloned["title"] = sch_title
+                merged.append(cloned)
+                existing_ids.add(sch_id)
+
+    if not base_school or "diger" in existing_ids:
+        merged.extend(other)
+
     return merged
 
 
 def build() -> dict:
     by_subject: dict[str, dict] = {}
-    
-    # Desteklenen uzantılara sahip dosyaları tara (geçici ofis dosyalarını atla)
+
     files = sorted(
         (
             p for p in ROOT.rglob("*")
@@ -183,7 +222,7 @@ def build() -> dict:
         ),
         key=lambda p: (fold(p.parent.name), fold(p.name)),
     )
-    
+
     for path in files:
         if path.parent == ROOT:
             continue
@@ -211,7 +250,7 @@ def build() -> dict:
         subject["schools"] = merge_schools(subject["schools"])
         subject["schools"].sort(
             key=lambda item: (
-                0 if item["id"] == "anadolu" else 1 if item["id"] == "fen" else 2,
+                SCHOOL_ORDER.get(item["id"], 99),
                 fold(item["title"]),
             )
         )
@@ -240,4 +279,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-   
