@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-16T20:39:46Z",
+  "generatedAt": "2026-09-18T20:21:42Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
     {
@@ -1885,6 +1885,341 @@
             10,
             11,
             12
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Rehberlik ve Yönlendirme",
+      "path": "Rehberlik ve Yönlendirme",
+      "schools": [
+        {
+          "id": "anadolu",
+          "title": "Anadolu Lisesi",
+          "fileName": "9 rehberlik.pdf",
+          "path": "Rehberlik ve Yönlendirme/9 rehberlik.pdf",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/9%20rehberlik.pdf",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "files": [
+            {
+              "grades": [
+                9
+              ],
+              "fileName": "9 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/9 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/9%20rehberlik.pdf"
+            },
+            {
+              "grades": [
+                10
+              ],
+              "fileName": "10 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/10 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/10%20rehberlik.pdf"
+            },
+            {
+              "grades": [
+                11
+              ],
+              "fileName": "11 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/11 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/11%20rehberlik.pdf"
+            },
+            {
+              "grades": [
+                12
+              ],
+              "fileName": "12 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/12 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/12%20rehberlik.pdf"
+            }
+          ]
+        },
+        {
+          "id": "fen",
+          "title": "Fen Lisesi",
+          "fileName": "9 rehberlik.pdf",
+          "path": "Rehberlik ve Yönlendirme/9 rehberlik.pdf",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/9%20rehberlik.pdf",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "files": [
+            {
+              "grades": [
+                9
+              ],
+              "fileName": "9 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/9 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/9%20rehberlik.pdf"
+            },
+            {
+              "grades": [
+                10
+              ],
+              "fileName": "10 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/10 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/10%20rehberlik.pdf"
+            },
+            {
+              "grades": [
+                11
+              ],
+              "fileName": "11 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/11 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/11%20rehberlik.pdf"
+            },
+            {
+              "grades": [
+                12
+              ],
+              "fileName": "12 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/12 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/12%20rehberlik.pdf"
+            }
+          ]
+        },
+        {
+          "id": "sosyal_bilimler",
+          "title": "Sosyal Bilimler Lisesi",
+          "fileName": "9 rehberlik.pdf",
+          "path": "Rehberlik ve Yönlendirme/9 rehberlik.pdf",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/9%20rehberlik.pdf",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "files": [
+            {
+              "grades": [
+                9
+              ],
+              "fileName": "9 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/9 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/9%20rehberlik.pdf"
+            },
+            {
+              "grades": [
+                10
+              ],
+              "fileName": "10 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/10 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/10%20rehberlik.pdf"
+            },
+            {
+              "grades": [
+                11
+              ],
+              "fileName": "11 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/11 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/11%20rehberlik.pdf"
+            },
+            {
+              "grades": [
+                12
+              ],
+              "fileName": "12 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/12 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/12%20rehberlik.pdf"
+            }
+          ]
+        },
+        {
+          "id": "imam_hatip",
+          "title": "Anadolu İmam Hatip Lisesi",
+          "fileName": "9 rehberlik.pdf",
+          "path": "Rehberlik ve Yönlendirme/9 rehberlik.pdf",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/9%20rehberlik.pdf",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "files": [
+            {
+              "grades": [
+                9
+              ],
+              "fileName": "9 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/9 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/9%20rehberlik.pdf"
+            },
+            {
+              "grades": [
+                10
+              ],
+              "fileName": "10 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/10 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/10%20rehberlik.pdf"
+            },
+            {
+              "grades": [
+                11
+              ],
+              "fileName": "11 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/11 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/11%20rehberlik.pdf"
+            },
+            {
+              "grades": [
+                12
+              ],
+              "fileName": "12 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/12 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/12%20rehberlik.pdf"
+            }
+          ]
+        },
+        {
+          "id": "meslek",
+          "title": "Mesleki ve Teknik Anadolu Lisesi",
+          "fileName": "9 rehberlik.pdf",
+          "path": "Rehberlik ve Yönlendirme/9 rehberlik.pdf",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/9%20rehberlik.pdf",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "files": [
+            {
+              "grades": [
+                9
+              ],
+              "fileName": "9 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/9 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/9%20rehberlik.pdf"
+            },
+            {
+              "grades": [
+                10
+              ],
+              "fileName": "10 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/10 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/10%20rehberlik.pdf"
+            },
+            {
+              "grades": [
+                11
+              ],
+              "fileName": "11 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/11 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/11%20rehberlik.pdf"
+            },
+            {
+              "grades": [
+                12
+              ],
+              "fileName": "12 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/12 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/12%20rehberlik.pdf"
+            }
+          ]
+        },
+        {
+          "id": "guzel_sanatlar",
+          "title": "Güzel Sanatlar Lisesi",
+          "fileName": "9 rehberlik.pdf",
+          "path": "Rehberlik ve Yönlendirme/9 rehberlik.pdf",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/9%20rehberlik.pdf",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "files": [
+            {
+              "grades": [
+                9
+              ],
+              "fileName": "9 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/9 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/9%20rehberlik.pdf"
+            },
+            {
+              "grades": [
+                10
+              ],
+              "fileName": "10 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/10 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/10%20rehberlik.pdf"
+            },
+            {
+              "grades": [
+                11
+              ],
+              "fileName": "11 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/11 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/11%20rehberlik.pdf"
+            },
+            {
+              "grades": [
+                12
+              ],
+              "fileName": "12 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/12 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/12%20rehberlik.pdf"
+            }
+          ]
+        },
+        {
+          "id": "spor",
+          "title": "Spor Lisesi",
+          "fileName": "9 rehberlik.pdf",
+          "path": "Rehberlik ve Yönlendirme/9 rehberlik.pdf",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/9%20rehberlik.pdf",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "files": [
+            {
+              "grades": [
+                9
+              ],
+              "fileName": "9 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/9 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/9%20rehberlik.pdf"
+            },
+            {
+              "grades": [
+                10
+              ],
+              "fileName": "10 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/10 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/10%20rehberlik.pdf"
+            },
+            {
+              "grades": [
+                11
+              ],
+              "fileName": "11 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/11 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/11%20rehberlik.pdf"
+            },
+            {
+              "grades": [
+                12
+              ],
+              "fileName": "12 rehberlik.pdf",
+              "path": "Rehberlik ve Yönlendirme/12 rehberlik.pdf",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/12%20rehberlik.pdf"
+            }
           ]
         }
       ]
