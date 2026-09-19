@@ -17,7 +17,6 @@ RAW_BASE = f"https://raw.githubusercontent.com/{REPO}/{BRANCH}"
 OUT = ROOT / "catalog.json"
 GRADE_RE = re.compile(r"(?<!\d)(9|10|11|12)(?!\d)")
 
-# Taranacak dosya uzantıları
 SUPPORTED_EXTENSIONS = {".xlsx", ".pdf", ".docx", ".doc"}
 
 ALL_STANDARD_SCHOOLS = [
@@ -130,9 +129,9 @@ def file_entry(path: Path, grades: list[int]) -> dict:
     }
 
 
-def collapse_school_group(group: list[dict]) -> dict:
-    if len(group) == 1:
-        return group[0]
+def collapse_school_group(group: list[dict], target_id: str = None, target_title: str = None) -> dict:
+    if not group:
+        return {}
     ordered = sorted(
         group,
         key=lambda item: (min(item["grades"] or [99]), fold(item["fileName"])),
@@ -152,13 +151,12 @@ def collapse_school_group(group: list[dict]) -> dict:
             if grade not in grades:
                 grades.append(grade)
     grades.sort()
-    primary = max(
-        ordered,
-        key=lambda item: (len(item["grades"]), -min(item["grades"] or [99])),
-    )
+
+    primary = ordered[0]
+
     return {
-        "id": group[0]["id"],
-        "title": group[0]["title"],
+        "id": target_id or group[0]["id"],
+        "title": target_title or group[0]["title"],
         "fileName": primary["fileName"],
         "path": primary["path"],
         "downloadUrl": primary["downloadUrl"],
@@ -183,16 +181,26 @@ def merge_schools(schools: list[dict]) -> list[dict]:
 
     existing_ids = {school["id"] for school in merged}
 
+    # 1. Okul türü hiç belirtilmemiş genel dosyalar varsa (Rehberlik gibi):
+    # Bu dosyaları ayrı ayrı okullar olarak listelemek yerine her dosyayı bağımsız bir girdi olarak sun
+    if not existing_ids and other:
+        # Her dosya tek başına (örn. rehberlik 9, rehberlik 10, rehberlik 11) listelenir
+        for item in other:
+            merged.append({
+                "id": "genel",
+                "title": item["fileName"].rsplit(".", 1)[0],
+                "fileName": item["fileName"],
+                "path": item["path"],
+                "downloadUrl": item["downloadUrl"],
+                "grades": item["grades"],
+                "files": [item],
+            })
+        return merged
+
+    # 2. Eğer Anadolu Lisesi varsa ve diğer liseler eksikse onları tamamla
     base_school = None
     if "anadolu" in existing_ids:
         base_school = next(s for s in merged if s["id"] == "anadolu")
-    elif other:
-        default_item = collapse_school_group(other)
-        base_school = json.loads(json.dumps(default_item))
-        base_school["id"] = "anadolu"
-        base_school["title"] = "Anadolu Lisesi"
-        merged.append(base_school)
-        existing_ids.add("anadolu")
 
     if base_school:
         for sch_id, sch_title in ALL_STANDARD_SCHOOLS:
@@ -203,9 +211,7 @@ def merge_schools(schools: list[dict]) -> list[dict]:
                 merged.append(cloned)
                 existing_ids.add(sch_id)
 
-    if not base_school or "diger" in existing_ids:
-        merged.extend(other)
-
+    merged.extend(other)
     return merged
 
 
