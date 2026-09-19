@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-18T20:29:22Z",
+  "generatedAt": "2026-09-19T09:22:15Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
     {
@@ -8,8 +8,8 @@
       "path": "Beden Eğitimi ve Spor",
       "schools": [
         {
-          "id": "anadolu",
-          "title": "Anadolu Lisesi",
+          "id": "genel",
+          "title": "Beden Eğitimi ve Spor Dersi",
           "fileName": "Beden Eğitimi ve Spor Dersi.xlsx",
           "path": "Beden Eğitimi ve Spor/Beden Eğitimi ve Spor Dersi.xlsx",
           "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Beden%20E%C4%9Fitimi%20ve%20Spor/Beden%20E%C4%9Fitimi%20ve%20Spor%20Dersi.xlsx",
@@ -18,84 +18,21 @@
             10,
             11,
             12
-          ]
-        },
-        {
-          "id": "fen",
-          "title": "Fen Lisesi",
-          "fileName": "Beden Eğitimi ve Spor Dersi.xlsx",
-          "path": "Beden Eğitimi ve Spor/Beden Eğitimi ve Spor Dersi.xlsx",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Beden%20E%C4%9Fitimi%20ve%20Spor/Beden%20E%C4%9Fitimi%20ve%20Spor%20Dersi.xlsx",
-          "grades": [
-            9,
-            10,
-            11,
-            12
-          ]
-        },
-        {
-          "id": "sosyal_bilimler",
-          "title": "Sosyal Bilimler Lisesi",
-          "fileName": "Beden Eğitimi ve Spor Dersi.xlsx",
-          "path": "Beden Eğitimi ve Spor/Beden Eğitimi ve Spor Dersi.xlsx",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Beden%20E%C4%9Fitimi%20ve%20Spor/Beden%20E%C4%9Fitimi%20ve%20Spor%20Dersi.xlsx",
-          "grades": [
-            9,
-            10,
-            11,
-            12
-          ]
-        },
-        {
-          "id": "imam_hatip",
-          "title": "Anadolu İmam Hatip Lisesi",
-          "fileName": "Beden Eğitimi ve Spor Dersi.xlsx",
-          "path": "Beden Eğitimi ve Spor/Beden Eğitimi ve Spor Dersi.xlsx",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Beden%20E%C4%9Fitimi%20ve%20Spor/Beden%20E%C4%9Fitimi%20ve%20Spor%20Dersi.xlsx",
-          "grades": [
-            9,
-            10,
-            11,
-            12
-          ]
-        },
-        {
-          "id": "meslek",
-          "title": "Mesleki ve Teknik Anadolu Lisesi",
-          "fileName": "Beden Eğitimi ve Spor Dersi.xlsx",
-          "path": "Beden Eğitimi ve Spor/Beden Eğitimi ve Spor Dersi.xlsx",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Beden%20E%C4%9Fitimi%20ve%20Spor/Beden%20E%C4%9Fitimi%20ve%20Spor%20Dersi.xlsx",
-          "grades": [
-            9,
-            10,
-            11,
-            12
-          ]
-        },
-        {
-          "id": "guzel_sanatlar",
-          "title": "Güzel Sanatlar Lisesi",
-          "fileName": "Beden Eğitimi ve Spor Dersi.xlsx",
-          "path": "Beden Eğitimi ve Spor/Beden Eğitimi ve Spor Dersi.xlsx",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Beden%20E%C4%9Fitimi%20ve%20Spor/Beden%20E%C4%9Fitimi%20ve%20Spor%20Dersi.xlsx",
-          "grades": [
-            9,
-            10,
-            11,
-            12
-          ]
-        },
-        {
-          "id": "spor",
-          "title": "Spor Lisesi",
-          "fileName": "Beden Eğitimi ve Spor Dersi.xlsx",
-          "path": "Beden Eğitimi ve Spor/Beden Eğitimi ve Spor Dersi.xlsx",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Beden%20E%C4%9Fitimi%20ve%20Spor/Beden%20E%C4%9Fitimi%20ve%20Spor%20Dersi.xlsx",
-          "grades": [
-            9,
-            10,
-            11,
-            12
+          ],
+          "files": [
+            {
+              "id": "diger",
+              "title": "Beden Eğitimi ve Spor Dersi",
+              "fileName": "Beden Eğitimi ve Spor Dersi.xlsx",
+              "path": "Beden Eğitimi ve Spor/Beden Eğitimi ve Spor Dersi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Beden%20E%C4%9Fitimi%20ve%20Spor/Beden%20E%C4%9Fitimi%20ve%20Spor%20Dersi.xlsx",
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ]
+            }
           ]
         }
       ]
@@ -115,6 +52,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "BİYOLOJİ ANADOLU LİSESİ.xlsx",
+              "path": "Biyoloji/BİYOLOJİ ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Biyoloji/B%C4%B0YOLOJ%C4%B0%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -128,6 +78,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "BİYOLOJİ FEN LİSESI.xlsx",
+              "path": "Biyoloji/BİYOLOJİ FEN LİSESI.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Biyoloji/BI%CC%87YOLOJI%CC%87%20FEN%20LI%CC%87SESI.xlsx"
+            }
           ]
         },
         {
@@ -141,6 +104,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "BİYOLOJİ ANADOLU LİSESİ.xlsx",
+              "path": "Biyoloji/BİYOLOJİ ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Biyoloji/B%C4%B0YOLOJ%C4%B0%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -154,6 +130,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "BİYOLOJİ ANADOLU LİSESİ.xlsx",
+              "path": "Biyoloji/BİYOLOJİ ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Biyoloji/B%C4%B0YOLOJ%C4%B0%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -167,6 +156,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "BİYOLOJİ ANADOLU LİSESİ.xlsx",
+              "path": "Biyoloji/BİYOLOJİ ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Biyoloji/B%C4%B0YOLOJ%C4%B0%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -180,6 +182,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "BİYOLOJİ ANADOLU LİSESİ.xlsx",
+              "path": "Biyoloji/BİYOLOJİ ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Biyoloji/B%C4%B0YOLOJ%C4%B0%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -193,6 +208,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "BİYOLOJİ ANADOLU LİSESİ.xlsx",
+              "path": "Biyoloji/BİYOLOJİ ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Biyoloji/B%C4%B0YOLOJ%C4%B0%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         }
       ]
@@ -212,6 +240,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Coğrafya ANADOLU LİSESİ.xlsx",
+              "path": "Coğrafya/Coğrafya ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Co%C4%9Frafya/Co%C4%9Frafya%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -225,6 +266,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Coğrafya FEN LİSESİ.xlsx",
+              "path": "Coğrafya/Coğrafya FEN LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Co%C4%9Frafya/Co%C4%9Frafya%20FEN%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -238,6 +292,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Coğrafya SOSYAL BİLİMLER LİSESİ.xlsx",
+              "path": "Coğrafya/Coğrafya SOSYAL BİLİMLER LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Co%C4%9Frafya/Co%C4%9Frafya%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -251,6 +318,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Coğrafya ANADOLU LİSESİ.xlsx",
+              "path": "Coğrafya/Coğrafya ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Co%C4%9Frafya/Co%C4%9Frafya%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -264,6 +344,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Coğrafya ANADOLU LİSESİ.xlsx",
+              "path": "Coğrafya/Coğrafya ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Co%C4%9Frafya/Co%C4%9Frafya%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -277,6 +370,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Coğrafya ANADOLU LİSESİ.xlsx",
+              "path": "Coğrafya/Coğrafya ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Co%C4%9Frafya/Co%C4%9Frafya%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -290,6 +396,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Coğrafya ANADOLU LİSESİ.xlsx",
+              "path": "Coğrafya/Coğrafya ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Co%C4%9Frafya/Co%C4%9Frafya%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         }
       ]
@@ -642,6 +761,17 @@
           "grades": [
             10,
             11
+          ],
+          "files": [
+            {
+              "grades": [
+                10,
+                11
+              ],
+              "fileName": "Felsefe ANADOLU LİSESİ.xlsx",
+              "path": "Felsefe/Felsefe ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Felsefe/Felsefe%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -653,6 +783,17 @@
           "grades": [
             10,
             11
+          ],
+          "files": [
+            {
+              "grades": [
+                10,
+                11
+              ],
+              "fileName": "Felsefe ANADOLU LİSESİ.xlsx",
+              "path": "Felsefe/Felsefe ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Felsefe/Felsefe%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -664,6 +805,17 @@
           "grades": [
             10,
             11
+          ],
+          "files": [
+            {
+              "grades": [
+                10,
+                11
+              ],
+              "fileName": "Felsefe SOSYAL BİLİMLER LİSESİ.xlsx",
+              "path": "Felsefe/Felsefe SOSYAL BİLİMLER LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Felsefe/Felsefe%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -675,6 +827,17 @@
           "grades": [
             10,
             11
+          ],
+          "files": [
+            {
+              "grades": [
+                10,
+                11
+              ],
+              "fileName": "Felsefe ANADOLU LİSESİ.xlsx",
+              "path": "Felsefe/Felsefe ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Felsefe/Felsefe%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -686,6 +849,17 @@
           "grades": [
             10,
             11
+          ],
+          "files": [
+            {
+              "grades": [
+                10,
+                11
+              ],
+              "fileName": "Felsefe ANADOLU LİSESİ.xlsx",
+              "path": "Felsefe/Felsefe ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Felsefe/Felsefe%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -697,6 +871,17 @@
           "grades": [
             10,
             11
+          ],
+          "files": [
+            {
+              "grades": [
+                10,
+                11
+              ],
+              "fileName": "Felsefe ANADOLU LİSESİ.xlsx",
+              "path": "Felsefe/Felsefe ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Felsefe/Felsefe%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -705,6 +890,28 @@
           "fileName": "Felsefe ANADOLU LİSESİ.xlsx",
           "path": "Felsefe/Felsefe ANADOLU LİSESİ.xlsx",
           "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Felsefe/Felsefe%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
+          "grades": [
+            10,
+            11
+          ],
+          "files": [
+            {
+              "grades": [
+                10,
+                11
+              ],
+              "fileName": "Felsefe ANADOLU LİSESİ.xlsx",
+              "path": "Felsefe/Felsefe ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Felsefe/Felsefe%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
+          ]
+        },
+        {
+          "id": "diger",
+          "title": "Felsefe FEN BİLİMLER LİSESİ",
+          "fileName": "Felsefe FEN BİLİMLER LİSESİ.xlsx",
+          "path": "Felsefe/Felsefe FEN BİLİMLER LİSESİ.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Felsefe/Felsefe%20FEN%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
           "grades": [
             10,
             11
@@ -727,6 +934,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Fizik ANADOLU LİSESİ.xlsx",
+              "path": "Fizik/Fizik ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Fizik/Fizik%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -740,6 +960,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Fizik FEN LİSESİ.xlsx",
+              "path": "Fizik/Fizik FEN LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Fizik/Fizik%20FEN%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -751,6 +984,17 @@
           "grades": [
             9,
             10
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10
+              ],
+              "fileName": "Fizik SOSYAL BİLİMLER LİSESİ.xlsx",
+              "path": "Fizik/Fizik SOSYAL BİLİMLER LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Fizik/Fizik%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -764,6 +1008,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Fizik ANADOLU LİSESİ.xlsx",
+              "path": "Fizik/Fizik ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Fizik/Fizik%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -777,6 +1034,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Fizik ANADOLU LİSESİ.xlsx",
+              "path": "Fizik/Fizik ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Fizik/Fizik%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -790,6 +1060,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Fizik ANADOLU LİSESİ.xlsx",
+              "path": "Fizik/Fizik ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Fizik/Fizik%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -803,6 +1086,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Fizik ANADOLU LİSESİ.xlsx",
+              "path": "Fizik/Fizik ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Fizik/Fizik%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         }
       ]
@@ -822,6 +1118,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "GÖRSEL SANATLAR Anadolu Lisesi.xlsx",
+              "path": "Görsel Sanatlar/GÖRSEL SANATLAR Anadolu Lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/G%C3%B6rsel%20Sanatlar/G%C3%96RSEL%20SANATLAR%20Anadolu%20Lisesi.xlsx"
+            }
           ]
         },
         {
@@ -835,6 +1144,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "GÖRSEL SANATLAR Anadolu Lisesi.xlsx",
+              "path": "Görsel Sanatlar/GÖRSEL SANATLAR Anadolu Lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/G%C3%B6rsel%20Sanatlar/G%C3%96RSEL%20SANATLAR%20Anadolu%20Lisesi.xlsx"
+            }
           ]
         },
         {
@@ -848,6 +1170,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "GÖRSEL SANATLAR Anadolu Lisesi.xlsx",
+              "path": "Görsel Sanatlar/GÖRSEL SANATLAR Anadolu Lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/G%C3%B6rsel%20Sanatlar/G%C3%96RSEL%20SANATLAR%20Anadolu%20Lisesi.xlsx"
+            }
           ]
         },
         {
@@ -861,6 +1196,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "GÖRSEL SANATLAR Anadolu Lisesi.xlsx",
+              "path": "Görsel Sanatlar/GÖRSEL SANATLAR Anadolu Lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/G%C3%B6rsel%20Sanatlar/G%C3%96RSEL%20SANATLAR%20Anadolu%20Lisesi.xlsx"
+            }
           ]
         },
         {
@@ -874,6 +1222,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "GÖRSEL SANATLAR Anadolu Lisesi.xlsx",
+              "path": "Görsel Sanatlar/GÖRSEL SANATLAR Anadolu Lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/G%C3%B6rsel%20Sanatlar/G%C3%96RSEL%20SANATLAR%20Anadolu%20Lisesi.xlsx"
+            }
           ]
         },
         {
@@ -887,6 +1248,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "GÖRSEL SANATLAR Anadolu Lisesi.xlsx",
+              "path": "Görsel Sanatlar/GÖRSEL SANATLAR Anadolu Lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/G%C3%B6rsel%20Sanatlar/G%C3%96RSEL%20SANATLAR%20Anadolu%20Lisesi.xlsx"
+            }
           ]
         },
         {
@@ -900,6 +1274,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "GÖRSEL SANATLAR Anadolu Lisesi.xlsx",
+              "path": "Görsel Sanatlar/GÖRSEL SANATLAR Anadolu Lisesi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/G%C3%B6rsel%20Sanatlar/G%C3%96RSEL%20SANATLAR%20Anadolu%20Lisesi.xlsx"
+            }
           ]
         }
       ]
@@ -1184,6 +1571,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Kimya ANADOLU LİSESİ.xlsx",
+              "path": "Kimya/Kimya ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Kimya/Kimya%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -1197,6 +1597,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Kimya FEN LİSESİ.xlsx",
+              "path": "Kimya/Kimya FEN LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Kimya/Kimya%20FEN%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -1208,6 +1621,17 @@
           "grades": [
             9,
             10
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10
+              ],
+              "fileName": "Kimya SOSYAL BİLİMLER LİSESİ.xlsx",
+              "path": "Kimya/Kimya SOSYAL BİLİMLER LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Kimya/Kimya%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -1221,6 +1645,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Kimya ANADOLU LİSESİ.xlsx",
+              "path": "Kimya/Kimya ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Kimya/Kimya%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -1234,6 +1671,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Kimya ANADOLU LİSESİ.xlsx",
+              "path": "Kimya/Kimya ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Kimya/Kimya%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -1247,6 +1697,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Kimya ANADOLU LİSESİ.xlsx",
+              "path": "Kimya/Kimya ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Kimya/Kimya%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -1260,6 +1723,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Kimya ANADOLU LİSESİ.xlsx",
+              "path": "Kimya/Kimya ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Kimya/Kimya%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         }
       ]
@@ -1279,6 +1755,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Mantık ANADOLU LİSESi.xlsx",
+              "path": "Mantık/Mantık ANADOLU LİSESi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Mant%C4%B1k/Mant%C4%B1k%20ANADOLU%20L%C4%B0SESi.xlsx"
+            }
           ]
         },
         {
@@ -1292,6 +1781,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Mantık ANADOLU LİSESi.xlsx",
+              "path": "Mantık/Mantık ANADOLU LİSESi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Mant%C4%B1k/Mant%C4%B1k%20ANADOLU%20L%C4%B0SESi.xlsx"
+            }
           ]
         },
         {
@@ -1305,6 +1807,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Mantık SOSYAL BİLİMLER LİSESİ.xlsx",
+              "path": "Mantık/Mantık SOSYAL BİLİMLER LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Mant%C4%B1k/Mant%C4%B1k%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -1318,6 +1833,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Mantık ANADOLU LİSESi.xlsx",
+              "path": "Mantık/Mantık ANADOLU LİSESi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Mant%C4%B1k/Mant%C4%B1k%20ANADOLU%20L%C4%B0SESi.xlsx"
+            }
           ]
         },
         {
@@ -1331,6 +1859,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Mantık ANADOLU LİSESi.xlsx",
+              "path": "Mantık/Mantık ANADOLU LİSESi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Mant%C4%B1k/Mant%C4%B1k%20ANADOLU%20L%C4%B0SESi.xlsx"
+            }
           ]
         },
         {
@@ -1344,6 +1885,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Mantık ANADOLU LİSESi.xlsx",
+              "path": "Mantık/Mantık ANADOLU LİSESi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Mant%C4%B1k/Mant%C4%B1k%20ANADOLU%20L%C4%B0SESi.xlsx"
+            }
           ]
         },
         {
@@ -1357,6 +1911,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Mantık ANADOLU LİSESi.xlsx",
+              "path": "Mantık/Mantık ANADOLU LİSESi.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Mant%C4%B1k/Mant%C4%B1k%20ANADOLU%20L%C4%B0SESi.xlsx"
+            }
           ]
         }
       ]
@@ -1376,6 +1943,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Matematik ANADOLU LİSESİ.xlsx",
+              "path": "Matematik/Matematik ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Matematik/Matematik%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -1389,6 +1969,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Matematik FEN LİSESİ.xlsx",
+              "path": "Matematik/Matematik FEN LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Matematik/Matematik%20FEN%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -1402,6 +1995,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Matematik ANADOLU LİSESİ.xlsx",
+              "path": "Matematik/Matematik ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Matematik/Matematik%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -1415,6 +2021,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Matematik ANADOLU LİSESİ.xlsx",
+              "path": "Matematik/Matematik ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Matematik/Matematik%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -1428,6 +2047,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Matematik ANADOLU LİSESİ.xlsx",
+              "path": "Matematik/Matematik ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Matematik/Matematik%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -1441,6 +2073,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Matematik ANADOLU LİSESİ.xlsx",
+              "path": "Matematik/Matematik ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Matematik/Matematik%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -1454,6 +2099,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Matematik ANADOLU LİSESİ.xlsx",
+              "path": "Matematik/Matematik ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Matematik/Matematik%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         }
       ]
@@ -1700,8 +2358,8 @@
       "path": "Proje Uygulamaları ve Tasarım",
       "schools": [
         {
-          "id": "anadolu",
-          "title": "Anadolu Lisesi",
+          "id": "genel",
+          "title": "Puvt",
           "fileName": "Puvt.docx",
           "path": "Proje Uygulamaları ve Tasarım/Puvt.docx",
           "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Proje%20Uygulamalar%C4%B1%20ve%20Tasar%C4%B1m/Puvt.docx",
@@ -1710,84 +2368,21 @@
             10,
             11,
             12
-          ]
-        },
-        {
-          "id": "fen",
-          "title": "Fen Lisesi",
-          "fileName": "Puvt.docx",
-          "path": "Proje Uygulamaları ve Tasarım/Puvt.docx",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Proje%20Uygulamalar%C4%B1%20ve%20Tasar%C4%B1m/Puvt.docx",
-          "grades": [
-            9,
-            10,
-            11,
-            12
-          ]
-        },
-        {
-          "id": "sosyal_bilimler",
-          "title": "Sosyal Bilimler Lisesi",
-          "fileName": "Puvt.docx",
-          "path": "Proje Uygulamaları ve Tasarım/Puvt.docx",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Proje%20Uygulamalar%C4%B1%20ve%20Tasar%C4%B1m/Puvt.docx",
-          "grades": [
-            9,
-            10,
-            11,
-            12
-          ]
-        },
-        {
-          "id": "imam_hatip",
-          "title": "Anadolu İmam Hatip Lisesi",
-          "fileName": "Puvt.docx",
-          "path": "Proje Uygulamaları ve Tasarım/Puvt.docx",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Proje%20Uygulamalar%C4%B1%20ve%20Tasar%C4%B1m/Puvt.docx",
-          "grades": [
-            9,
-            10,
-            11,
-            12
-          ]
-        },
-        {
-          "id": "meslek",
-          "title": "Mesleki ve Teknik Anadolu Lisesi",
-          "fileName": "Puvt.docx",
-          "path": "Proje Uygulamaları ve Tasarım/Puvt.docx",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Proje%20Uygulamalar%C4%B1%20ve%20Tasar%C4%B1m/Puvt.docx",
-          "grades": [
-            9,
-            10,
-            11,
-            12
-          ]
-        },
-        {
-          "id": "guzel_sanatlar",
-          "title": "Güzel Sanatlar Lisesi",
-          "fileName": "Puvt.docx",
-          "path": "Proje Uygulamaları ve Tasarım/Puvt.docx",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Proje%20Uygulamalar%C4%B1%20ve%20Tasar%C4%B1m/Puvt.docx",
-          "grades": [
-            9,
-            10,
-            11,
-            12
-          ]
-        },
-        {
-          "id": "spor",
-          "title": "Spor Lisesi",
-          "fileName": "Puvt.docx",
-          "path": "Proje Uygulamaları ve Tasarım/Puvt.docx",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Proje%20Uygulamalar%C4%B1%20ve%20Tasar%C4%B1m/Puvt.docx",
-          "grades": [
-            9,
-            10,
-            11,
-            12
+          ],
+          "files": [
+            {
+              "id": "diger",
+              "title": "Puvt",
+              "fileName": "Puvt.docx",
+              "path": "Proje Uygulamaları ve Tasarım/Puvt.docx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Proje%20Uygulamalar%C4%B1%20ve%20Tasar%C4%B1m/Puvt.docx",
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ]
+            }
           ]
         }
       ]
@@ -1807,6 +2402,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Psikoloji ANADOLU LİSESİ.xlsx",
+              "path": "Psikoloji/Psikoloji ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Psikoloji/Psikoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -1820,6 +2428,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Psikoloji ANADOLU LİSESİ.xlsx",
+              "path": "Psikoloji/Psikoloji ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Psikoloji/Psikoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -1833,6 +2454,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Psikoloji SOSYAL BİLİMLER LİSESİ.xlsx",
+              "path": "Psikoloji/Psikoloji SOSYAL BİLİMLER LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Psikoloji/Psikoloji%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -1846,6 +2480,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Psikoloji ANADOLU LİSESİ.xlsx",
+              "path": "Psikoloji/Psikoloji ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Psikoloji/Psikoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -1859,6 +2506,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Psikoloji ANADOLU LİSESİ.xlsx",
+              "path": "Psikoloji/Psikoloji ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Psikoloji/Psikoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -1872,6 +2532,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Psikoloji ANADOLU LİSESİ.xlsx",
+              "path": "Psikoloji/Psikoloji ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Psikoloji/Psikoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -1885,6 +2558,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Psikoloji ANADOLU LİSESİ.xlsx",
+              "path": "Psikoloji/Psikoloji ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Psikoloji/Psikoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         }
       ]
@@ -1894,331 +2580,90 @@
       "path": "Rehberlik ve Yönlendirme",
       "schools": [
         {
-          "id": "anadolu",
-          "title": "Anadolu Lisesi",
-          "fileName": "rehberlik 9.pdf",
-          "path": "Rehberlik ve Yönlendirme/rehberlik 9.pdf",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%209.pdf",
+          "id": "genel",
+          "title": "rehberlik 10",
+          "fileName": "rehberlik 10.pdf",
+          "path": "Rehberlik ve Yönlendirme/rehberlik 10.pdf",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2010.pdf",
           "grades": [
-            9,
-            10,
-            11,
-            12
+            10
           ],
           "files": [
             {
-              "grades": [
-                9
-              ],
-              "fileName": "rehberlik 9.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 9.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%209.pdf"
-            },
-            {
-              "grades": [
-                10
-              ],
+              "id": "diger",
+              "title": "rehberlik 10",
               "fileName": "rehberlik 10.pdf",
               "path": "Rehberlik ve Yönlendirme/rehberlik 10.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2010.pdf"
-            },
-            {
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2010.pdf",
               "grades": [
-                11
-              ],
-              "fileName": "rehberlik 11.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 11.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2011.pdf"
-            },
-            {
-              "grades": [
-                12
-              ],
-              "fileName": "rehberlik 12.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 12.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2012.pdf"
+                10
+              ]
             }
           ]
         },
         {
-          "id": "fen",
-          "title": "Fen Lisesi",
-          "fileName": "rehberlik 9.pdf",
-          "path": "Rehberlik ve Yönlendirme/rehberlik 9.pdf",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%209.pdf",
+          "id": "genel",
+          "title": "rehberlik 11",
+          "fileName": "rehberlik 11.pdf",
+          "path": "Rehberlik ve Yönlendirme/rehberlik 11.pdf",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2011.pdf",
           "grades": [
-            9,
-            10,
-            11,
-            12
+            11
           ],
           "files": [
             {
-              "grades": [
-                9
-              ],
-              "fileName": "rehberlik 9.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 9.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%209.pdf"
-            },
-            {
-              "grades": [
-                10
-              ],
-              "fileName": "rehberlik 10.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 10.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2010.pdf"
-            },
-            {
-              "grades": [
-                11
-              ],
+              "id": "diger",
+              "title": "rehberlik 11",
               "fileName": "rehberlik 11.pdf",
               "path": "Rehberlik ve Yönlendirme/rehberlik 11.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2011.pdf"
-            },
-            {
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2011.pdf",
               "grades": [
-                12
-              ],
-              "fileName": "rehberlik 12.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 12.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2012.pdf"
+                11
+              ]
             }
           ]
         },
         {
-          "id": "sosyal_bilimler",
-          "title": "Sosyal Bilimler Lisesi",
-          "fileName": "rehberlik 9.pdf",
-          "path": "Rehberlik ve Yönlendirme/rehberlik 9.pdf",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%209.pdf",
+          "id": "genel",
+          "title": "rehberlik 12",
+          "fileName": "rehberlik 12.pdf",
+          "path": "Rehberlik ve Yönlendirme/rehberlik 12.pdf",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2012.pdf",
           "grades": [
-            9,
-            10,
-            11,
             12
           ],
           "files": [
             {
-              "grades": [
-                9
-              ],
-              "fileName": "rehberlik 9.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 9.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%209.pdf"
-            },
-            {
-              "grades": [
-                10
-              ],
-              "fileName": "rehberlik 10.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 10.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2010.pdf"
-            },
-            {
-              "grades": [
-                11
-              ],
-              "fileName": "rehberlik 11.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 11.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2011.pdf"
-            },
-            {
-              "grades": [
-                12
-              ],
+              "id": "diger",
+              "title": "rehberlik 12",
               "fileName": "rehberlik 12.pdf",
               "path": "Rehberlik ve Yönlendirme/rehberlik 12.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2012.pdf"
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2012.pdf",
+              "grades": [
+                12
+              ]
             }
           ]
         },
         {
-          "id": "imam_hatip",
-          "title": "Anadolu İmam Hatip Lisesi",
+          "id": "genel",
+          "title": "rehberlik 9",
           "fileName": "rehberlik 9.pdf",
           "path": "Rehberlik ve Yönlendirme/rehberlik 9.pdf",
           "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%209.pdf",
           "grades": [
-            9,
-            10,
-            11,
-            12
+            9
           ],
           "files": [
             {
-              "grades": [
-                9
-              ],
+              "id": "diger",
+              "title": "rehberlik 9",
               "fileName": "rehberlik 9.pdf",
               "path": "Rehberlik ve Yönlendirme/rehberlik 9.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%209.pdf"
-            },
-            {
-              "grades": [
-                10
-              ],
-              "fileName": "rehberlik 10.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 10.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2010.pdf"
-            },
-            {
-              "grades": [
-                11
-              ],
-              "fileName": "rehberlik 11.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 11.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2011.pdf"
-            },
-            {
-              "grades": [
-                12
-              ],
-              "fileName": "rehberlik 12.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 12.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2012.pdf"
-            }
-          ]
-        },
-        {
-          "id": "meslek",
-          "title": "Mesleki ve Teknik Anadolu Lisesi",
-          "fileName": "rehberlik 9.pdf",
-          "path": "Rehberlik ve Yönlendirme/rehberlik 9.pdf",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%209.pdf",
-          "grades": [
-            9,
-            10,
-            11,
-            12
-          ],
-          "files": [
-            {
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%209.pdf",
               "grades": [
                 9
-              ],
-              "fileName": "rehberlik 9.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 9.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%209.pdf"
-            },
-            {
-              "grades": [
-                10
-              ],
-              "fileName": "rehberlik 10.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 10.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2010.pdf"
-            },
-            {
-              "grades": [
-                11
-              ],
-              "fileName": "rehberlik 11.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 11.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2011.pdf"
-            },
-            {
-              "grades": [
-                12
-              ],
-              "fileName": "rehberlik 12.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 12.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2012.pdf"
-            }
-          ]
-        },
-        {
-          "id": "guzel_sanatlar",
-          "title": "Güzel Sanatlar Lisesi",
-          "fileName": "rehberlik 9.pdf",
-          "path": "Rehberlik ve Yönlendirme/rehberlik 9.pdf",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%209.pdf",
-          "grades": [
-            9,
-            10,
-            11,
-            12
-          ],
-          "files": [
-            {
-              "grades": [
-                9
-              ],
-              "fileName": "rehberlik 9.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 9.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%209.pdf"
-            },
-            {
-              "grades": [
-                10
-              ],
-              "fileName": "rehberlik 10.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 10.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2010.pdf"
-            },
-            {
-              "grades": [
-                11
-              ],
-              "fileName": "rehberlik 11.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 11.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2011.pdf"
-            },
-            {
-              "grades": [
-                12
-              ],
-              "fileName": "rehberlik 12.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 12.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2012.pdf"
-            }
-          ]
-        },
-        {
-          "id": "spor",
-          "title": "Spor Lisesi",
-          "fileName": "rehberlik 9.pdf",
-          "path": "Rehberlik ve Yönlendirme/rehberlik 9.pdf",
-          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%209.pdf",
-          "grades": [
-            9,
-            10,
-            11,
-            12
-          ],
-          "files": [
-            {
-              "grades": [
-                9
-              ],
-              "fileName": "rehberlik 9.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 9.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%209.pdf"
-            },
-            {
-              "grades": [
-                10
-              ],
-              "fileName": "rehberlik 10.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 10.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2010.pdf"
-            },
-            {
-              "grades": [
-                11
-              ],
-              "fileName": "rehberlik 11.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 11.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2011.pdf"
-            },
-            {
-              "grades": [
-                12
-              ],
-              "fileName": "rehberlik 12.pdf",
-              "path": "Rehberlik ve Yönlendirme/rehberlik 12.pdf",
-              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Rehberlik%20ve%20Y%C3%B6nlendirme/rehberlik%2012.pdf"
+              ]
             }
           ]
         }
@@ -2290,6 +2735,16 @@
           "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyoloji/Sosyoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
           "grades": [
             11
+          ],
+          "files": [
+            {
+              "grades": [
+                11
+              ],
+              "fileName": "Sosyoloji ANADOLU LİSESİ.xlsx",
+              "path": "Sosyoloji/Sosyoloji ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyoloji/Sosyoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -2300,6 +2755,16 @@
           "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyoloji/Sosyoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
           "grades": [
             11
+          ],
+          "files": [
+            {
+              "grades": [
+                11
+              ],
+              "fileName": "Sosyoloji ANADOLU LİSESİ.xlsx",
+              "path": "Sosyoloji/Sosyoloji ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyoloji/Sosyoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -2310,6 +2775,16 @@
           "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyoloji/Sosyoloji%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx",
           "grades": [
             11
+          ],
+          "files": [
+            {
+              "grades": [
+                11
+              ],
+              "fileName": "Sosyoloji SOSYAL BİLİMLER LİSESİ.xlsx",
+              "path": "Sosyoloji/Sosyoloji SOSYAL BİLİMLER LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyoloji/Sosyoloji%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -2320,6 +2795,16 @@
           "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyoloji/Sosyoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
           "grades": [
             11
+          ],
+          "files": [
+            {
+              "grades": [
+                11
+              ],
+              "fileName": "Sosyoloji ANADOLU LİSESİ.xlsx",
+              "path": "Sosyoloji/Sosyoloji ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyoloji/Sosyoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -2330,6 +2815,16 @@
           "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyoloji/Sosyoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
           "grades": [
             11
+          ],
+          "files": [
+            {
+              "grades": [
+                11
+              ],
+              "fileName": "Sosyoloji ANADOLU LİSESİ.xlsx",
+              "path": "Sosyoloji/Sosyoloji ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyoloji/Sosyoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -2340,6 +2835,16 @@
           "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyoloji/Sosyoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
           "grades": [
             11
+          ],
+          "files": [
+            {
+              "grades": [
+                11
+              ],
+              "fileName": "Sosyoloji ANADOLU LİSESİ.xlsx",
+              "path": "Sosyoloji/Sosyoloji ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyoloji/Sosyoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -2350,6 +2855,16 @@
           "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyoloji/Sosyoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx",
           "grades": [
             11
+          ],
+          "files": [
+            {
+              "grades": [
+                11
+              ],
+              "fileName": "Sosyoloji ANADOLU LİSESİ.xlsx",
+              "path": "Sosyoloji/Sosyoloji ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Sosyoloji/Sosyoloji%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         }
       ]
@@ -2369,6 +2884,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Tarih ANADOLU LİSESİ.xlsx",
+              "path": "Tarih/Tarih ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Tarih/Tarih%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -2382,6 +2910,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Tarih FEN LİSESİ.xlsx",
+              "path": "Tarih/Tarih FEN LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Tarih/Tarih%20FEN%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -2395,6 +2936,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Tarih SOSYAL BİLİMLER LİSESİ.xlsx",
+              "path": "Tarih/Tarih SOSYAL BİLİMLER LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Tarih/Tarih%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -2408,6 +2962,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Tarih ANADOLU LİSESİ.xlsx",
+              "path": "Tarih/Tarih ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Tarih/Tarih%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -2421,6 +2988,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Tarih ANADOLU LİSESİ.xlsx",
+              "path": "Tarih/Tarih ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Tarih/Tarih%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -2434,6 +3014,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Tarih ANADOLU LİSESİ.xlsx",
+              "path": "Tarih/Tarih ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Tarih/Tarih%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -2447,6 +3040,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Tarih ANADOLU LİSESİ.xlsx",
+              "path": "Tarih/Tarih ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/Tarih/Tarih%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         }
       ]
@@ -2466,6 +3072,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Türk Dili ve Edebiyatı ANADOLU LİSESİ.xlsx",
+              "path": "Türk Dili ve Edebiyatı/Türk Dili ve Edebiyatı ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -2479,6 +3098,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Türk Dili ve Edebiyatı FEN LİSESİ.xlsx",
+              "path": "Türk Dili ve Edebiyatı/Türk Dili ve Edebiyatı FEN LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1%20FEN%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -2492,6 +3124,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Türk Dili ve Edebiyatı SOSYAL BİLİMLER LİSESİ.xlsx",
+              "path": "Türk Dili ve Edebiyatı/Türk Dili ve Edebiyatı SOSYAL BİLİMLER LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1%20SOSYAL%20B%C4%B0L%C4%B0MLER%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -2505,6 +3150,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Türk Dili ve Edebiyatı ANADOLU LİSESİ.xlsx",
+              "path": "Türk Dili ve Edebiyatı/Türk Dili ve Edebiyatı ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -2518,6 +3176,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Türk Dili ve Edebiyatı ANADOLU LİSESİ.xlsx",
+              "path": "Türk Dili ve Edebiyatı/Türk Dili ve Edebiyatı ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -2531,6 +3202,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Türk Dili ve Edebiyatı ANADOLU LİSESİ.xlsx",
+              "path": "Türk Dili ve Edebiyatı/Türk Dili ve Edebiyatı ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         },
         {
@@ -2544,6 +3228,19 @@
             10,
             11,
             12
+          ],
+          "files": [
+            {
+              "grades": [
+                9,
+                10,
+                11,
+                12
+              ],
+              "fileName": "Türk Dili ve Edebiyatı ANADOLU LİSESİ.xlsx",
+              "path": "Türk Dili ve Edebiyatı/Türk Dili ve Edebiyatı ANADOLU LİSESİ.xlsx",
+              "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
+            }
           ]
         }
       ]
