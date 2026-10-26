@@ -15,6 +15,9 @@ REPO = "mutludurmaz/planlar"
 BRANCH = "main"
 RAW_BASE = f"https://raw.githubusercontent.com/{REPO}/{BRANCH}"
 OUT = ROOT / "catalog.json"
+# MEB ODSGM konu-soru dagilim tablolari: senaryolar/<yyyy>-<yyyy>-<donem>/<Ders>.xlsx
+SCENARIO_DIR = "senaryolar"
+SCENARIO_TERM_RE = re.compile(r"^(\d{4})-(\d{4})-([12])$")
 GRADE_RE = re.compile(r"(?<!\d)(9|10|11|12)(?!\d)")
 
 SUPPORTED_EXTENSIONS = {".xlsx", ".pdf", ".docx", ".doc"}
@@ -225,6 +228,7 @@ def build() -> dict:
             and p.suffix.lower() in SUPPORTED_EXTENSIONS
             and ".git" not in p.parts
             and not p.name.startswith("~$")
+            and p.relative_to(ROOT).parts[0] != SCENARIO_DIR
         ),
         key=lambda p: (fold(p.parent.name), fold(p.name)),
     )
@@ -268,8 +272,39 @@ def build() -> dict:
     }
 
 
+def build_scenarios() -> list[dict]:
+    """Donem klasorlerindeki ders tablolarini (yeni donem once) listeler."""
+    base = ROOT / SCENARIO_DIR
+    if not base.is_dir():
+        return []
+    terms: list[dict] = []
+    for term_dir in base.iterdir():
+        match = SCENARIO_TERM_RE.match(term_dir.name) if term_dir.is_dir() else None
+        if not match:
+            continue
+        subjects = [
+            {"title": path.stem, **file_entry(path, [])}
+            for path in sorted(term_dir.glob("*.xlsx"), key=lambda p: fold(p.stem))
+            if not path.name.startswith("~$")
+        ]
+        for subject in subjects:
+            subject.pop("grades", None)
+        if not subjects:
+            continue
+        start, end, term = match.groups()
+        terms.append({
+            "id": term_dir.name,
+            "title": f"{start}-{end} {term}. Dönem",
+            "source": "MEB ÖDSGM konu-soru dağılım tabloları",
+            "subjects": subjects,
+        })
+    terms.sort(key=lambda item: item["id"], reverse=True)
+    return terms
+
+
 def main() -> None:
     catalog = build()
+    catalog["senaryolar"] = build_scenarios()
     OUT.write_text(
         json.dumps(catalog, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
@@ -281,6 +316,8 @@ def main() -> None:
         for school in subject["schools"]
     )
     print(f"catalog.json: {len(catalog['subjects'])} ders, {schools} okul, {files} dosya")
+    for term in catalog["senaryolar"]:
+        print(f"senaryolar {term['id']}: {len(term['subjects'])} ders")
 
 
 if __name__ == "__main__":
