@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-19T09:22:15Z",
+  "generatedAt": "2026-10-26T19:48:59Z",
   "source": "https://github.com/mutludurmaz/planlar",
   "subjects": [
     {
@@ -3242,6 +3242,75 @@
               "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1%20ANADOLU%20L%C4%B0SES%C4%B0.xlsx"
             }
           ]
+        }
+      ]
+    }
+  ],
+  "senaryolar": [
+    {
+      "id": "2026-2027-1",
+      "title": "2026-2027 1. Dönem",
+      "source": "MEB ÖDSGM konu-soru dağılım tabloları",
+      "subjects": [
+        {
+          "title": "Biyoloji",
+          "fileName": "Biyoloji.xlsx",
+          "path": "senaryolar/2026-2027-1/Biyoloji.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/senaryolar/2026-2027-1/Biyoloji.xlsx"
+        },
+        {
+          "title": "Coğrafya",
+          "fileName": "Coğrafya.xlsx",
+          "path": "senaryolar/2026-2027-1/Coğrafya.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/senaryolar/2026-2027-1/Co%C4%9Frafya.xlsx"
+        },
+        {
+          "title": "Din Kültürü ve Ahlak Bilgisi",
+          "fileName": "Din Kültürü ve Ahlak Bilgisi.xlsx",
+          "path": "senaryolar/2026-2027-1/Din Kültürü ve Ahlak Bilgisi.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/senaryolar/2026-2027-1/Din%20K%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi.xlsx"
+        },
+        {
+          "title": "Felsefe",
+          "fileName": "Felsefe.xlsx",
+          "path": "senaryolar/2026-2027-1/Felsefe.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/senaryolar/2026-2027-1/Felsefe.xlsx"
+        },
+        {
+          "title": "Fizik",
+          "fileName": "Fizik.xlsx",
+          "path": "senaryolar/2026-2027-1/Fizik.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/senaryolar/2026-2027-1/Fizik.xlsx"
+        },
+        {
+          "title": "İngilizce",
+          "fileName": "İngilizce.xlsx",
+          "path": "senaryolar/2026-2027-1/İngilizce.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/senaryolar/2026-2027-1/%C4%B0ngilizce.xlsx"
+        },
+        {
+          "title": "Kimya",
+          "fileName": "Kimya.xlsx",
+          "path": "senaryolar/2026-2027-1/Kimya.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/senaryolar/2026-2027-1/Kimya.xlsx"
+        },
+        {
+          "title": "Matematik",
+          "fileName": "Matematik.xlsx",
+          "path": "senaryolar/2026-2027-1/Matematik.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/senaryolar/2026-2027-1/Matematik.xlsx"
+        },
+        {
+          "title": "Tarih",
+          "fileName": "Tarih.xlsx",
+          "path": "senaryolar/2026-2027-1/Tarih.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/senaryolar/2026-2027-1/Tarih.xlsx"
+        },
+        {
+          "title": "Türk Dili ve Edebiyatı",
+          "fileName": "Türk Dili ve Edebiyatı.xlsx",
+          "path": "senaryolar/2026-2027-1/Türk Dili ve Edebiyatı.xlsx",
+          "downloadUrl": "https://raw.githubusercontent.com/mutludurmaz/planlar/main/senaryolar/2026-2027-1/T%C3%BCrk%20Dili%20ve%20Edebiyat%C4%B1.xlsx"
         }
       ]
     }
